@@ -1,98 +1,128 @@
-
 /* Page Styles
 ================================ */
 
 * {
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
+
 body {
-	font: normal 1em/1.5 sans-serif;
-	color: #222;
-	background-color: #edeff0;
+  font: normal 1em/1.5 sans-serif;
+  color: #fff;
+  background-color: #edeff0;
+  background: url(../images/carbon-fiber-bg1.png);
 }
+
 img {
-	border: solid 1px;
-	padding: 5px;
+  border: solid 1px;
+  padding: 5px;
 }
+
 
 /* Main Layout Styles
 ================================ */
 
-.main-header {
-	padding-top: 10px;
-	padding-bottom: 10px;
-	background-color: #384047; 
-}
-.main-logo {
-	margin-top: 0;
-	margin-bottom: 0;
-	font-size: 1.5em;
-}
-.main-logo a, 
-.main-nav a {
-	display: block;
-	text-align: center;
-	border-radius: 5px;
-	color: white;
-	text-decoration: none;
-	padding: 10px 20px;
-}
-.main-logo a { 
-	background-color: #5fcf80; 
-}
-.main-nav a { 
-	background-color: #3f8abf; 
-}
+.main-header,
+.main-banner,
 .main-footer {
-	text-align: center;
-	margin-top: 30px;
-	padding-top: 5px;
-	padding-bottom: 5px;
- 	background-color: #b7c0c7;
+  background: #000;
 }
 
-@media (min-width: 768px) { 
-
-	/* Main Layout Styles
-	================================ */
-
-	body {
-		padding-top: 75px;
-	}
-	.main-header {
-		position: fixed;
-		top: 0;
-		width: 100%;
-	}
-	.main-nav {
-		text-align: right;
-	}
-	.main-nav li {
-		margin-top: 6px;
-		margin-left: 10px;
-		display: inline-block;
-	}
-	.main-banner {
-		background: #dfe2e4;
-		text-align: center;
-		padding: 50px 15px;
-		margin-bottom: 20px;
-	}
-
-	/* Imagery
-	================================ */
-
-	.feat-img {
-		width: 45%;
-		float: left;
-		margin: 5px 20px 10px 0;
-	}
-
+.main-header,
+.main-footer {
+  padding: 10px;
 }
 
-@media (min-width: 1px) and (max-width: 767px)  {
-	.main-nav li {
-		margin-top: 12px;
-	}
+.main-banner {
+  border-bottom: outset 3px rgb(236, 0, 140);
+  padding: 15px;
+}
+
+a,
+.nav a {
+  transition: 0.5s;
+}
+
+a {
+  color: rgb(255, 242, 0);
+}
+
+a:focus,
+a:hover
+ {
+  color: rgb(96, 255, 208);
+}
+
+.nav a {
+  border-radius: 5px;
+  color: white;
+  background-color: rgb(0,174,239);
+  display: block;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.nav a:focus,
+.nav a:hover {
+  background-color: rgb(96, 255, 208);
+}
+
+h1 {
+  color: rgb(236, 0, 140);
+  font-size: 1.8em;
+}
+
+blockquote {
+  color: rgb(0,174,239);
+  display: inline-block;
+  margin: 4px;
+  padding: 8px;
+}
+
+.main-logo {
+  background: url(../images/logo.png) no-repeat;
+  background-size: contain;
+  direction: ltr;
+  font-size: 3em;
+  min-height: 117px;
+  min-width: 188px;
+  margin: 10px auto;
+  text-align: center;
+  text-indent: -20000px;
+}
+
+@media (min-width: 768px) {
+  /* Main Layout Styles
+  ================================ */
+  body {
+    padding-top: 75px;
+  }
+  .main-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  .nav {
+    text-align: right;
+  }
+  .nav li {
+    margin-top: 6px;
+    margin-left: 10px;
+    display: inline-block;
+  }
+  /* Imagery
+  ================================ */
+  .feat-img {
+    width: 45%;
+    float: left;
+    margin: 5px 20px 10px 0;
+  }
+}
+
+@media (min-width: 1px) and (max-width: 767px) {
+  .nav li {
+    margin-top: 12px;
+  }
 }
