@@ -14,9 +14,12 @@ body {
   background: url(../images/carbon-fiber-bg1.png);
 }
 
+main {
+  margin: 4px;
+}
+
 img {
-  border: solid 1px;
-  padding: 5px;
+  border-radius: 4px;
 }
 
 
@@ -34,9 +37,14 @@ img {
   padding: 10px;
 }
 
+.main-header {
+/*  border-bottom: outset 3px rgb(255,242,0);
+*/}
+
 .main-banner {
+  border-top: outset 3px rgb(255,242,0);
   border-bottom: outset 3px rgb(236, 0, 140);
-  padding: 15px;
+  padding: 0;
 }
 
 a,
@@ -95,29 +103,11 @@ blockquote {
 @media (min-width: 768px) {
   /* Main Layout Styles
   ================================ */
-  body {
-    padding-top: 75px;
-  }
-  .main-header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-  }
-  .nav {
-    text-align: right;
-  }
   .nav li {
-    margin-top: 6px;
-    margin-left: 10px;
+    margin: 4px 4px 4px 0;
     display: inline-block;
   }
-  /* Imagery
-  ================================ */
-  .feat-img {
-    width: 45%;
-    float: left;
-    margin: 5px 20px 10px 0;
-  }
+  
 }
 
 @media (min-width: 1px) and (max-width: 767px) {
