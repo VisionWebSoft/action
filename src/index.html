@@ -7,6 +7,13 @@
 
   <link rel="stylesheet" href="css/grid.min.css">
   <link rel="stylesheet" href="css/normalize.min.css">
+  <!-- We need to keep grid and normalize separate from the 'concatenated' file to avoid conflicts, depsite the slightly larger overhead of addint in 2 additional CSS files.
+
+	So, action.min.css will only be a concatenation of what WE created for this project. 
+
+	We will manually copy grid and normalize and keep in the build folder. They will not change. -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/grid.css">
   <link rel="stylesheet" href="css/action.min.css">
 
 </head>
