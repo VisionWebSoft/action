@@ -55,8 +55,7 @@ module.exports = function( grunt ) { // just a node thing
     },
     concat: {
       concat: {
-        src: [ 'src/css/**/*.css', '!src/css/grid.min.css',
-        '!src/css/bootstrap.min.css'],
+        src: [ 'src/css/*.css' ],
         dest: 'build/css/action.min.css' // Not actually minified.
       }
     },
