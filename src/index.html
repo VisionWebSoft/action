@@ -5,26 +5,35 @@
   <title>Action Graphics - "Our Action Creates Great Reactions"</title>
   <meta name="viewport" content="width=device-width">
 
-  <link rel="stylesheet" href="css/grid.min.css">
-  <link rel="stylesheet" href="css/normalize.min.css">
-  <!-- We need to keep grid and normalize separate from the 'concatenated' file to avoid conflicts, depsite the slightly larger overhead of addint in 2 additional CSS files.
 
-	So, action.min.css will only be a concatenation of what WE created for this project. 
+  <link rel="stylesheet" href="css/vendor/grid.min.css">
+  <link rel="stylesheet" href="css/vendor/bootstrap.min.css">
 
-	We will manually copy grid and normalize and keep in the build folder. They will not change. -->
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/grid.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
   <link rel="stylesheet" href="css/action.min.css">
+
+  <!-- Supposedly Typekit needs to be in <head>, and not at bottom as is best practice, typically. -->
+  <script src="https://use.typekit.net/hof0sne.js"></script>
+  <script>
+  try {
+    Typekit.load({
+      async: true
+    });
+  } catch (e) {}
+  </script>
 
 </head>
 
 <body>
   <header class="main-header">
-    <address>Action Graphics &amp; More &nbsp; SOCIAL MEDIA ICONS
-      <br>
+    <!--     <address>Action Graphics &amp; More &nbsp; <span>
+ -->
+    <!-- <br> -->
 
-      <a href="#">hello@actiong.com</a>&nbsp;&bull;&nbsp;<a href="#">618.939.5775</a>
-      <br>
+    <a href="#">hello@actiong.com</a>&nbsp;&bull;&nbsp;<a href="#">618.939.5775</a>&nbsp;&bull;&nbsp;
+    <a href="#"><span class="fa fa-twitter-square"></span></a>&nbsp;
+    <a href="#"><span class="fa fa-linkedin-square"></span></a>
     </address>
     <nav class="nav grid-container">
       <ul class="main-nav">
@@ -36,15 +45,20 @@
         <li><a href="#">FAQ</a></li>
       </ul>
     </nav>
-    </header>
+  </header>
 
-    <section class="main-banner">
-      <h1>Action Graphics &amp; More</h1>
-      <p> We are <span class="special-text">the</span> Premier 'One-Stop Shop' for quality,
-        affordable <span class="special-text">all</span> Graphics &amp; Marketing</p>
-      <img class="feat-img" alt src="http://lorempixel.com/400/300" />
+  <main>
+    <div class="grid-container">
+      <section class="main-banner">
+        <h1>Action Graphics &amp; More</h1>
+        <p> We are <span class="special-text">the</span> Premier 'One-Stop Shop' for
+          quality, affordable <span class="special-text">all</span> Graphics &amp;
+          Marketing
+        </p>
+        <img class="feat-img" alt src="http://lorempixel.com/400/300" />
 
-    </section>
+      </section>
+    </div>
 
     <section class="grid-container">
       <h1>Testimonials</h1>
@@ -57,21 +71,24 @@
         </blockquote>
       </div>
     </section>
+  </main>
+  <footer class="main-footer">
+    <address>
+      <a href="#">8802 Summer Rd.&nbsp;&bull;&nbsp;Columbia, IL&nbsp;&bull;&nbsp;62236</a>
+      <br>
+      <a href="#">hello@actiong.com</a>&nbsp;&bull;&nbsp;<a href="#">618.939.5775</a>
+      <br>
+      <a href="#"><span class="fa fa-twitter-square"></span></a>&nbsp;
+      <a href="#"> <span class="fa fa-linkedin-square"></span>
+      </a>
+    </address>
+    <div class="main-logo"><a href="#">Action Graphics &amp; More</a></div>
+    <blockquote>"Action is the foundational key to all success."</blockquote>&nbsp;<i>- Pablo Picasso</i>
 
-    <footer class="main-footer">
-      <address>
-        <a href="#">8802 Summer Rd.&nbsp;&bull;&nbsp;Columbia, IL&nbsp;&bull;&nbsp;62236</a>
-        <br>
-        <a href="#">hello@actiong.com</a>&nbsp;&bull;&nbsp;<a href="#">618.939.5775</a>
-      </address>
-      <div class="main-logo"><a href="#">Action Graphics &amp; More</a></div>
+    <script type="text/javascript" src="js/jquery.js"></script>
 
-
-      <blockquote>"Action is the foundational key to all success."</blockquote>&nbsp;<i>- Pablo Picasso</i>
-
-    </footer>
-
-    <script type="text/javascript" src="js/action.min.css"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/action.min.js"></script>
 </body>
 
 </html>

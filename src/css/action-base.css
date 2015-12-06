@@ -8,14 +8,18 @@
 }
 
 body {
-  font: normal 1em/1.5 sans-serif;
+  font-family: "myriad-pro", sans-serif;
   color: #fff;
   background-color: #edeff0;
   background: url(../images/carbon-fiber-bg1.png);
 }
 
 main {
-  margin: 4px;
+  background-color: #000;
+  margin: 0 auto;
+  padding: 1em;
+  width: 98%;
+  width: calc(100% - 3em);
 }
 
 img {
@@ -34,12 +38,9 @@ img {
 
 .main-header,
 .main-footer {
+  text-align: center;
   padding: 10px;
 }
-
-.main-header {
-/*  border-bottom: outset 3px rgb(255,242,0);
-*/}
 
 .main-banner {
   border-top: outset 3px rgb(255,242,0);
@@ -89,8 +90,7 @@ blockquote {
 }
 
 .main-logo {
-  background: url(../images/logo.png) no-repeat;
-  background-size: contain;
+  background: url(../images/logo.png) no-repeat center / contain;
   direction: ltr;
   font-size: 3em;
   min-height: 117px;
