@@ -38,8 +38,6 @@ Thumbs.db
 
 # App Specific +
 ######################
-Gruntfile.js
-package.json
 node_modules/
 
 ## sublime
