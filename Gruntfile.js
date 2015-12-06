@@ -51,9 +51,7 @@ module.exports = function( grunt ) { // just a node thing
         "box-sizing": false,
         "universal-selector": false
       },
-      src: [ 'src/css/**/*.css', '!src/css/grid.min.css',
-        '!src/css/bootstrap.min.css'
-      ]
+      src: [ 'src/css/*.css']
     },
     concat: {
       concat: {
