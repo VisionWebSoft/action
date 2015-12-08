@@ -29,23 +29,20 @@ img {
 
 /* Main Layout Styles
 ================================ */
-
-.main-header,
-.main-banner,
-.main-footer {
-  background: #000;
-}
-
 .main-header,
 .main-footer {
-  text-align: center;
+  background: url(../images/perf-metal-texture.png);
   padding: 10px;
+  text-align: center;
 }
 
-.main-banner {
-  border-top: outset 3px rgb(255,242,0);
-  border-bottom: outset 3px rgb(236, 0, 140);
-  padding: 0;
+.main-header {
+    border-bottom: outset 3px rgb(236, 0, 140);
+}
+
+.main-footer {
+    border-top: outset 3px rgb(236, 0, 140);
+
 }
 
 a,
@@ -107,7 +104,7 @@ blockquote {
     margin: 4px 4px 4px 0;
     display: inline-block;
   }
-  
+
 }
 
 @media (min-width: 1px) and (max-width: 767px) {
@@ -115,3 +112,4 @@ blockquote {
     margin-top: 12px;
   }
 }
+/* Bootstrap NavBar */
