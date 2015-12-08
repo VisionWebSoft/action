@@ -32,17 +32,17 @@ img {
 .main-header,
 .main-footer {
   background: url(../images/perf-metal-texture.png);
-  padding: 10px;
   text-align: center;
 }
 
 .main-header {
     border-bottom: outset 3px rgb(236, 0, 140);
+    padding-bottom: 0.5em;
 }
 
 .main-footer {
-    border-top: outset 3px rgb(236, 0, 140);
-
+  border-top: outset 3px rgb(236, 0, 140);
+  padding: 0.5em 0;
 }
 
 a,
@@ -104,7 +104,7 @@ blockquote {
     margin: 4px 4px 4px 0;
     display: inline-block;
   }
-  
+
 }
 
 @media (min-width: 1px) and (max-width: 767px) {
@@ -112,5 +112,5 @@ blockquote {
     margin-top: 12px;
   }
 }
-/* Bootstrap NavBar */
 
+/* Bootstrap NavBar */
