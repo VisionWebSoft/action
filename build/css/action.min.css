@@ -114,3 +114,18 @@ blockquote {
 }
 
 /* Bootstrap NavBar */
+
+/* Override colors */
+.navbar-action {
+  background: rgb(0, 174, 239);
+}
+.navbar-action .navbar-toggle {
+  border: none;
+}
+.navbar-action .navbar-toggle .icon-bar {
+    background-color: rgb(255, 242, 0);
+}
+
+.navbar-action .navbar-brand {
+  color: rgb(255, 242, 0);
+}
