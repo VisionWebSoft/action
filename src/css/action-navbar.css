@@ -4,12 +4,15 @@
 .navbar-action {
   background: rgb(0, 174, 239);
 }
+
 .navbar-action .navbar-toggle {
   border: none;
 }
+
 .navbar-action .navbar-toggle .icon-bar {
     background-color: rgb(255, 242, 0);
 }
+
 .navbar-action .navbar-brand {
   color: rgb(255, 242, 0); /* Must define here for specificity. */
 }
@@ -21,4 +24,15 @@
 .navbar-action li:hover {
   background-color: rgb(96, 255, 208);
   transition: 0.2s;
+}
+
+.navbar-action .form-control,
+.navbar-action .form-group {
+  display: inline-block;
+  width: calc(100% - 80px);
+}
+
+.navbar-action button[type=submit] {
+  position: relative;
+  right: 40px; /* should move this next to form element, based on width: calcl() above. */
 }
