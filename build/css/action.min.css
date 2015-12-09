@@ -51,6 +51,7 @@ a {
   transition: 0.5s;
 }
 
+/* Designer's Note: Would like to be able to do :not(.navbar-action a), so those links don't change colors - only 'text' links do. */
 a:focus,
 a:hover {
   color: rgb(96, 255, 208);
@@ -123,7 +124,7 @@ blockquote {
     background-color: rgb(255, 242, 0);
 }
 .navbar-action .navbar-brand {
-  color: rgb(255, 242, 0); /* Musd define here for specificity. */
+  color: rgb(255, 242, 0); /* Must define here for specificity. */
 }
 
 .navbar-action li { /* make the 'clickable' area as large as possible. */
@@ -132,4 +133,5 @@ blockquote {
 
 .navbar-action li:hover {
   background-color: rgb(96, 255, 208);
+  transition: 0.2s;
 }

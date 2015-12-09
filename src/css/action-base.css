@@ -51,6 +51,7 @@ a {
   transition: 0.5s;
 }
 
+/* Designer's Note: Would like to be able to do :not(.navbar-action a), so those links don't change colors - only 'text' links do. */
 a:focus,
 a:hover {
   color: rgb(96, 255, 208);
