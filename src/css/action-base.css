@@ -8,10 +8,11 @@
 }
 
 body {
-  font-family: "myriad-pro", sans-serif;
   color: #fff;
   background-color: #edeff0;
   background: url(../images/carbon-fiber-bg1.png);
+  font-family: "myriad-pro", sans-serif;
+  font-size: 1.9em;
 }
 
 main {
@@ -45,13 +46,9 @@ img {
   padding: 0.5em 0;
 }
 
-a,
-.nav a {
-  transition: 0.5s;
-}
-
 a {
   color: rgb(255, 242, 0);
+  transition: 0.5s;
 }
 
 a:focus,

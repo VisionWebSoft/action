@@ -10,7 +10,14 @@
 .navbar-action .navbar-toggle .icon-bar {
     background-color: rgb(255, 242, 0);
 }
-
 .navbar-action .navbar-brand {
-  color: rgb(255, 242, 0);
+  color: rgb(255, 242, 0); /* Musd define here for specificity. */
+}
+
+.navbar-action li { /* make the 'clickable' area as large as possible. */
+  border-bottom: solid thin rgb(255,242,0);
+}
+
+.navbar-action li:hover {
+  background-color: rgb(96, 255, 208);
 }
