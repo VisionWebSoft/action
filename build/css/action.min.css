@@ -46,9 +46,13 @@ img {
   padding: 0.5em 0;
 }
 
+a,
+.navbar-action button[type=submit]:hover {
+  transition: 0.5s;
+}
+
 a {
   color: rgb(255, 242, 0);
-  transition: 0.5s;
 }
 
 /* Designer's Note: Would like to be able to do :not(.navbar-action a), so those links don't change colors - only 'text' links do. */
@@ -68,7 +72,8 @@ a:hover {
 }
 
 .nav a:focus,
-.nav a:hover {
+.nav a:hover,
+.navbar-action button[type=submit]:hover {
   background-color: rgb(96, 255, 208);
 }
 
@@ -105,11 +110,11 @@ blockquote {
 
 }
 
-@media (min-width: 1px) and (max-width: 767px) {
+/*@media (min-width: 1px) and (max-width: 767px) {
   .nav li {
     margin-top: 12px;
   }
-}
+}*/
 
 /* Bootstrap NavBar */
 
@@ -130,6 +135,10 @@ blockquote {
   color: rgb(255, 242, 0); /* Must define here for specificity. */
 }
 
+.navbar-action .navbar-nav {
+  margin-top: 0;
+}
+
 .navbar-action li { /* make the 'clickable' area as large as possible. */
   border-bottom: solid thin rgb(255,242,0);
 }
@@ -146,6 +155,9 @@ blockquote {
 }
 
 .navbar-action button[type=submit] {
+  background-color: rgb(255, 242, 0);
+  color: black;
   position: relative;
   right: 40px; /* should move this next to form element, based on width: calcl() above. */
 }
+ 
