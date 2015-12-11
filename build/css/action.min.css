@@ -8,10 +8,11 @@
 }
 
 body {
-  font-family: "myriad-pro", sans-serif;
   color: #fff;
   background-color: #edeff0;
   background: url(../images/carbon-fiber-bg1.png);
+  font-family: "myriad-pro", sans-serif;
+  font-size: 1.9em;
 }
 
 main {
@@ -32,21 +33,21 @@ img {
 .main-header,
 .main-footer {
   background: url(../images/perf-metal-texture.png);
-  padding: 10px;
   text-align: center;
 }
 
 .main-header {
     border-bottom: outset 3px rgb(236, 0, 140);
+    padding-bottom: 0.5em;
 }
 
 .main-footer {
-    border-top: outset 3px rgb(236, 0, 140);
-
+  border-top: outset 3px rgb(236, 0, 140);
+  padding: 0.5em 0;
 }
 
 a,
-.nav a {
+.navbar-action button[type=submit]:hover {
   transition: 0.5s;
 }
 
@@ -54,6 +55,7 @@ a {
   color: rgb(255, 242, 0);
 }
 
+/* Designer's Note: Would like to be able to do :not(.navbar-action a), so those links don't change colors - only 'text' links do. */
 a:focus,
 a:hover {
   color: rgb(96, 255, 208);
@@ -70,7 +72,8 @@ a:hover {
 }
 
 .nav a:focus,
-.nav a:hover {
+.nav a:hover,
+.navbar-action button[type=submit]:hover {
   background-color: rgb(96, 255, 208);
 }
 
@@ -104,13 +107,57 @@ blockquote {
     margin: 4px 4px 4px 0;
     display: inline-block;
   }
-  
+
 }
 
-@media (min-width: 1px) and (max-width: 767px) {
+/*@media (min-width: 1px) and (max-width: 767px) {
   .nav li {
     margin-top: 12px;
   }
-}
+}*/
+
 /* Bootstrap NavBar */
 
+/* Override colors */
+.navbar-action {
+  background: rgb(0, 174, 239);
+}
+
+.navbar-action .navbar-toggle {
+  border: none;
+}
+
+.navbar-action .navbar-toggle .icon-bar {
+    background-color: rgb(255, 242, 0);
+}
+
+.navbar-action .navbar-brand {
+  color: rgb(255, 242, 0); /* Must define here for specificity. */
+}
+
+.navbar-action .navbar-nav {
+  margin-top: 0;
+}
+
+.navbar-action li { /* make the 'clickable' area as large as possible. */
+  border-bottom: solid thin rgb(255,242,0);
+}
+
+.navbar-action li:hover {
+  background-color: rgb(96, 255, 208);
+  transition: 0.2s;
+}
+
+.navbar-action .form-control,
+.navbar-action .form-group {
+  display: inline-block;
+  width: calc(100% - 80px);
+}
+
+.navbar-action button[type=submit] {
+  background-color: rgb(255, 242, 0);
+  color: black;
+  position: relative;
+  right: 40px; /* should move this next to form element, based on width: calcl() above. */
+}
+ 
