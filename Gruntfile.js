@@ -64,11 +64,11 @@ module.exports = function( grunt ) { // just a node thing
                 "box-sizing": false,
                 "universal-selector": false
             },
-            src: [ 'src/css/*.css' ]
+            src: [ 'src/css/*.css', '!src/css/vendor/' ]
         },
         concat: {
             concat: {
-                src: [ 'src/css/*.css' ],
+                src: [ 'src/css/*.css', '!src/css/vendor/' ],
                 dest: 'build/css/action.min.css' // Not actually minified.
             }
         },
