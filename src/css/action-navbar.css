@@ -4,6 +4,10 @@
   margin: 0;
 }
 
+#login {
+  float: left;
+}
+
 .navbar-action .navbar-toggle {
   border: none;
 }
@@ -37,5 +41,5 @@
 }
  .navbar-action button[type=submit]:hover {
    background-color: #ccc;
-   
+
  }

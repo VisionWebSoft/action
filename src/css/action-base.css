@@ -51,7 +51,8 @@ a,
   transition: 0.5s;
 }
 
-a {
+a,
+legend {
   color: rgb(255, 242, 0);
 }
 

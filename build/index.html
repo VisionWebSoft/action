@@ -41,7 +41,7 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">Action Graphics &amp; More</a>
+            <a class="navbar-brand" href="#">Action Graphics - Client Login</a>
           </div>
 
           <!-- Collect the nav links, forms, and other content for toggling -->
@@ -62,6 +62,7 @@
                   <li><a href="#">Vehicle Graphics</a></li>
                 </ul>
               </li>
+              <li><a href="#">Contact Us</a></li>
               <li><a href="#">About Us</a></li>
               <li><a href="#">FAQ</a></li>
             </ul>
@@ -78,42 +79,83 @@
         <!-- /.container -->
       </nav>
 
-      <form action="#">
+      <form class="form-action" action="#">
         <fieldset>
           <legend>Your Info</legend>
           <div class="form-group">
-            <label for="fname">First Name:</label>
+            <label for="fname">First Name:
+              <strong>
+                <abbr title="required">*</abbr>
+              </strong>
+            </label>
             <input id="fname" type="text" name="fname" required>
-            <strong>
-              <abbr title="required">*</abbr>
-            </strong>
+
           </div>
+          <!-- /.form-group -->
 
           <div class="form-group">
-            <label for="lname">Last Name:</label>
+            <label for="lname">Last Name:
+              <strong>
+                <abbr title="required">*</abbr>
+              </strong>
+            </label>
             <input id="lname" type="text" name="lname" required>
-            <strong>
-              <abbr title="required">*</abbr>
-            </strong>
+
           </div>
+          <!-- /.form-group -->
 
           <div class="form-group">
-            <label for="email">Email:</label>
-            <input id="email" type="email" name="email" required>
-            <strong>
-              <abbr title="required">*</abbr>
-            </strong>
+            <label for="cname">Company/Organization Name:
+              <strong>
+                <abbr title="required">*</abbr>
+              </strong>
+            </label>
+            <input id="cname" type="text" name="cname" required>
+
           </div>
+          <!-- /.form-group -->
+
+          <div class="form-group">
+            <label for="position">Position:
+              <strong>
+                <abbr title="required">*</abbr>
+              </strong>
+            </label>
+            <input id="position" type="text" name="position" required placeholder="Please enter your job title or occupation/role with your Company/Organization">
+
+          </div>
+          <!-- /.form-group -->
+
+          <div class="form-group">
+            <label for="email">Email:
+              <strong>
+                <abbr title="required">*</abbr>
+              </strong>
+            </label>
+            <input id="email" type="email" name="email" required>
+
+          </div>
+          <!-- /.form-group -->
 
           <div class="form-group">
             <label for="fone">Contact Phone #:</label>
             <input id="fone" type="tel" name="fone">
           </div>
+          <!-- /.form-group -->
+
           <div class="form-group">
-            <label for="msg">How might we help you?</label>
-            <textarea id="msg" name="msg"></textarea>
+            <label for="msg">How might we help you?
+              <strong>
+                <abbr title="required">*</abbr>
+              </strong>
+            </label>
+            <textarea id="msg" name="msg" required>Please be as descriptive as possible.</textarea>
+
           </div>
+          <!-- /.form-group -->
+
         </fieldset>
+
         <button type="submit">Submit</button>
       </form>
 
@@ -131,7 +173,7 @@
     <main>
       <div class="grid-container">
         <section class="main-banner">
-          <h1>Action Graphics &amp; More</h1>
+          <h1>Action Graphics</h1>
           <p> We are
             <span class="special-text">the</span> Premier 'One-Stop Shop' for quality, affordable
             <span class="special-text">all</span> Graphics &amp; Marketing

@@ -1,0 +1,11 @@
+/* Forms with Bootstrap 'base' styles. */
+
+.form-action {
+  padding: 15px;
+  text-align: left;
+}
+
+.form-action input,
+.form-action textarea {
+  width: 100%;
+}
