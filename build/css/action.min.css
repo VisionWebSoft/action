@@ -58,7 +58,8 @@ a {
 /* Designer's Note: Would like to be able to do :not(.navbar-action a), so those links don't change colors - only 'text' links do. */
 a:focus,
 a:hover {
-  color: rgb(96, 255, 208);
+  color: rgb(96, 225, 100);
+  text-decoration: none;
 }
 
 .nav a {
@@ -74,7 +75,7 @@ a:hover {
 .nav a:focus,
 .nav a:hover,
 .navbar-action button[type=submit]:hover {
-  background-color: rgb(96, 255, 208);
+  background-color: rgb(96, 225, 100);
 }
 
 h1 {
