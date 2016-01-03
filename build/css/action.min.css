@@ -118,21 +118,12 @@ blockquote {
 
 /* Bootstrap NavBar */
 
-/* Override colors */
-.navbar-action {
-  background: rgb(0, 174, 239);
+.navbar-action .navbar-header {
+  margin: 0;
 }
 
 .navbar-action .navbar-toggle {
   border: none;
-}
-
-.navbar-action .navbar-toggle .icon-bar {
-    background-color: rgb(255, 242, 0);
-}
-
-.navbar-action .navbar-brand {
-  color: rgb(255, 242, 0); /* Must define here for specificity. */
 }
 
 .navbar-action .navbar-nav {
@@ -145,8 +136,8 @@ blockquote {
   margin-bottom: -5px;
 }
 
+.navbar-nav navbar-toggle:hover
 .navbar-action li:hover {
-  background-color: rgb(96, 255, 208);
   transition: 0.2s;
 }
 
@@ -162,3 +153,7 @@ blockquote {
   position: relative;
   right: 40px; /* should move this next to form element, based on width: calcl() above. */
 }
+ .navbar-action button[type=submit]:hover {
+   background-color: #ccc;
+   
+ }
