@@ -60,6 +60,7 @@ module.exports = function( grunt ) { // just a node thing
         // CSS Tasks
         csslint: {
             options: {
+                "box-model": false,
                 "box-sizing": false,
                 "universal-selector": false
             },
