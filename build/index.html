@@ -2,6 +2,9 @@
 <html>
 
   <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
     <title>Action Graphics - "Our Action Creates Great Reactions"</title>
     <meta name="viewport" content="width=device-width">
 
@@ -20,46 +23,141 @@
           async: true
         });
       } catch (e) {}
+
     </script>
 
   </head>
 
   <body>
     <header class="main-header">
+
       <nav class="navbar navbar-default navbar-action">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-action" aria-expanded="false">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">Action Graphics &amp; More</a>
+        <div class="container">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-action" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Action Graphics - Client Login</a>
+          </div>
+
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="navbar-collapse-action">
+
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Products &amp; Services
+                  <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Apparel</a></li>
+                  <li><a href="#">Graphic &amp; Logo Design</a></li>
+                  <li><a href="#">Engraving</a></li>
+                  <li><a href="#">Print</a></li>
+                  <li><a href="#">Promotional Products</a></li>
+                  <li><a href="#">Trade Show Displays</a></li>
+                  <li><a href="#">Vehicle Graphics</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">FAQ</a></li>
+            </ul>
+
+            <form class="navbar-form navbar-left" role="search">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Product Search">
+              </div>
+              <button type="submit" class="btn btn-action-submit">Submit</button>
+            </form>
+          </div>
+          <!-- /.navbar-collapse -->
         </div>
-
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="navbar-collapse-action">
-
-          <ul class="nav navbar-nav">
-            <li><a href="#" class="active">Home</a></li>
-            <li><a href="#">Products/Services</a></li>
-            <li><a href="#">Price Quotes</a></li>
-            <li><a href="#">Schedule Consultation</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">FAQ</a></li>
-          </ul>
-          <form class="navbar-form navbar-left" role="search">
-            <div class="form-group">
-              <input type="text" class="form-control" placeholder="Search">
-            </div>
-            <button type="submit" class="btn btn-action-submit">Submit</button>
-          </form>
-
-        </div>
-        <!-- /.navbar-collapse -->
-
+        <!-- /.container -->
       </nav>
+
+      <form class="form-action" action="#">
+        <fieldset>
+          <legend>Your Info</legend>
+          <div class="form-group">
+            <label for="fname">First Name:
+              <strong>
+                <abbr title="required">*</abbr>
+              </strong>
+            </label>
+            <input id="fname" type="text" name="fname" required>
+
+          </div>
+          <!-- /.form-group -->
+
+          <div class="form-group">
+            <label for="lname">Last Name:
+              <strong>
+                <abbr title="required">*</abbr>
+              </strong>
+            </label>
+            <input id="lname" type="text" name="lname" required>
+
+          </div>
+          <!-- /.form-group -->
+
+          <div class="form-group">
+            <label for="cname">Company/Organization Name:
+              <strong>
+                <abbr title="required">*</abbr>
+              </strong>
+            </label>
+            <input id="cname" type="text" name="cname" required>
+
+          </div>
+          <!-- /.form-group -->
+
+          <div class="form-group">
+            <label for="position">Position:
+              <strong>
+                <abbr title="required">*</abbr>
+              </strong>
+            </label>
+            <input id="position" type="text" name="position" required placeholder="Please enter your job title or occupation/role with your Company/Organization">
+
+          </div>
+          <!-- /.form-group -->
+
+          <div class="form-group">
+            <label for="email">Email:
+              <strong>
+                <abbr title="required">*</abbr>
+              </strong>
+            </label>
+            <input id="email" type="email" name="email" required>
+
+          </div>
+          <!-- /.form-group -->
+
+          <div class="form-group">
+            <label for="fone">Contact Phone #:</label>
+            <input id="fone" type="tel" name="fone">
+          </div>
+          <!-- /.form-group -->
+
+          <div class="form-group">
+            <label for="msg">How might we help you?
+              <strong>
+                <abbr title="required">*</abbr>
+              </strong>
+            </label>
+            <textarea id="msg" name="msg" required>Please be as descriptive as possible.</textarea>
+
+          </div>
+          <!-- /.form-group -->
+
+        </fieldset>
+
+        <button type="submit">Submit</button>
+      </form>
 
       <address>
         <a href="#">hello@actiong.com</a>&nbsp;&bull;&nbsp;<a href="#">618.939.5775</a>&nbsp;&bull;&nbsp;
@@ -75,7 +173,7 @@
     <main>
       <div class="grid-container">
         <section class="main-banner">
-          <h1>Action Graphics &amp; More</h1>
+          <h1>Action Graphics</h1>
           <p> We are
             <span class="special-text">the</span> Premier 'One-Stop Shop' for quality, affordable
             <span class="special-text">all</span> Graphics &amp; Marketing
@@ -89,10 +187,9 @@
         <h1>Testimonials</h1>
         <div class="testimonial">
           <img class="feat-img" alt src="http://lorempixel.com/400/300">
-          <blockquote>"Bacon ipsum dolor sit amet chicken pork ground round brisket corned beef ball tip shank tail
-            salami filet mignon ham hock pork belly venison shankle. Pig kielbasa drumstick sausage pork
-            chop boudin. Chicken t-bone salami pork chop, beef ribs kevin ham tri-tip beef venison biltong
-            brisket."
+          <blockquote>"Bacon ipsum dolor sit amet chicken pork ground round brisket corned beef ball tip shank tail salami filet mignon
+            ham hock pork belly venison shankle. Pig kielbasa drumstick sausage pork chop boudin. Chicken t-bone salami pork
+            chop, beef ribs kevin ham tri-tip beef venison biltong brisket."
           </blockquote>
         </div>
       </section>
@@ -112,11 +209,13 @@
       </address>
       <div class="main-logo"><a href="#">Action Graphics &amp; More</a></div>
       <blockquote>"Action is the foundational key to all success."</blockquote>&nbsp;<i>- Pablo Picasso</i>
+    </footer>
 
-      <script type="text/javascript" src="js/jquery.js"></script>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
-      <script type="text/javascript" src="js/bootstrap.min.js"></script>
-      <script type="text/javascript" src="js/action.min.js"></script>
-  </footer></body>
+    <script type="text/javascript" src="js/vendor/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/action.min.js"></script>
+  </body>
 
 </html>

@@ -12,7 +12,7 @@ body {
   background-color: #edeff0;
   background: url(../images/carbon-fiber-bg1.png);
   font-family: "myriad-pro", sans-serif;
-  font-size: 1.9em;
+  font-size: 1.8em;
 }
 
 main {
@@ -53,7 +53,8 @@ a,
   transition: 0.5s;
 }
 
-a {
+a,
+legend {
   color: rgb(255, 242, 0);
 }
 
@@ -62,7 +63,8 @@ a {
 
 a:focus,
 a:hover {
-  color: rgb(96, 255, 208);
+  color: rgb(96, 225, 100);
+  text-decoration: none;
 }
 
 .nav a {
@@ -78,12 +80,13 @@ a:hover {
 .nav a:focus,
 .nav a:hover,
 .navbar-action button[type=submit]:hover {
-  background-color: rgb(96, 255, 208);
+  background-color: rgb(96, 225, 100);
 }
 
 h1 {
   color: rgb(236, 0, 140);
-  font-size: 1.8em;
+  font-size: 1.6em;
+  line-height: 1.2em;
 }
 
 blockquote {
@@ -96,7 +99,7 @@ blockquote {
 .main-logo {
   background: url(../images/logo.png) no-repeat center / contain;
   direction: ltr;
-  font-size: 3em;
+  font-size: 3.2em;
   min-height: 117px;
   min-width: 188px;
   margin: 10px auto;
@@ -119,35 +122,44 @@ blockquote {
     margin-top: 12px;
   }
 }*/
+/* Forms with Bootstrap 'base' styles. */
+
+.form-action {
+  padding: 15px;
+  text-align: left;
+}
+
+.form-action input,
+.form-action textarea {
+  width: 100%;
+}
+
 /* Bootstrap NavBar */
 
-/* Override colors */
-.navbar-action {
-  background: rgb(0, 174, 239);
+.navbar-action .navbar-header {
+  margin: 0;
+}
+
+#login {
+  float: left;
 }
 
 .navbar-action .navbar-toggle {
   border: none;
 }
 
-.navbar-action .navbar-toggle .icon-bar {
-    background-color: rgb(255, 242, 0);
-}
-
-.navbar-action .navbar-brand {
-  color: rgb(255, 242, 0); /* Must define here for specificity. */
-}
-
 .navbar-action .navbar-nav {
   margin-top: 0;
 }
 
-.navbar-action li { /* make the 'clickable' area as large as possible. */
-  border-bottom: solid thin rgb(255,242,0);
+/* Prevent bg color from showing when dropdown is toggled. */
+.navbar-action .open .dropdown-menu {
+  margin-top: -5px;
+  margin-bottom: -5px;
 }
 
+.navbar-nav navbar-toggle:hover
 .navbar-action li:hover {
-  background-color: rgb(96, 255, 208);
   transition: 0.2s;
 }
 
@@ -163,7 +175,10 @@ blockquote {
   position: relative;
   right: 40px; /* should move this next to form element, based on width: calcl() above. */
 }
- 
+ .navbar-action button[type=submit]:hover {
+   background-color: #ccc;
+
+ }
 
 
 .no-wrap { 
