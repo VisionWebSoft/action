@@ -98,25 +98,31 @@ a:hover {
 }
 
 .collapse > p,
-.collapse > ul {
+.collapse > ul,
+.collapsing > p,
+.collapsing > ul {
   text-align: left;
 }
 
-.collapse {
+.collapse,
+.collapsing {
   background: rgb(0, 0, 0);
   background: rgba(0, 0, 0, 0.5);
 }
 
-.collapse {
+.collapse,
+.collapsing {
   padding: 0 .5em;
 }
 
 .collapse li:nth-child(odd),
+.collapsing li:nth-child(odd),
 h1 {
   color: rgb(236, 0, 140);
 }
 
 .collapse li:nth-child(even),
+.collapsing li:nth-child(even),
 blockquote {
   color: rgb(0, 174, 239);
 }
