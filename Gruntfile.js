@@ -62,6 +62,8 @@ module.exports = function( grunt ) { // just a node thing
             options: {
                 "box-model": false,
                 "box-sizing": false,
+                "ids": false,
+                "unique-headings": false,
                 "universal-selector": false
             },
             src: [ 'src/css/*.css', '!src/css/vendor/' ]
