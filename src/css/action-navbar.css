@@ -1,4 +1,19 @@
 /* Bootstrap NavBar */
+.nav a {
+  /*border-radius: 5px; - Designer's Note: Probably will use this on wide screen. */
+  color: white;
+  background-color: rgb(0, 174, 239);
+  display: block;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+}
+
+/*.nav a:focus,
+.nav a:hover,
+.navbar-action button[type=submit]:hover {
+  background-color: rgb(96, 225, 100);
+}*/
 
 .navbar-action .navbar-header,
 .navbar-action .navbar-collapse {
@@ -40,7 +55,7 @@
   position: relative;
   right: 40px; /* should move this next to form element, based on width: calcl() above. */
 }
- .navbar-action button[type=submit]:hover {
+ /*.navbar-action button[type=submit]:hover {
    background-color: #ccc;
 
- }
+ }*/

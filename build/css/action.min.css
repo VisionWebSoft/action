@@ -15,6 +15,34 @@ body {
   font-size: 1.8em;
 }
 
+a,
+button {
+  transition: 0.5s;
+}
+
+a,
+legend {
+  color: rgb(255, 242, 0);
+}
+
+
+button,
+img {
+  border-radius: 4px;
+}
+
+button {
+  background-color: rgb(255, 242, 0);
+  border: none;
+  color: black;
+  padding: 8px 10px;
+}
+
+button:focus,
+button:hover {
+  background-color: rgb(96, 225, 100);
+}
+
 main {
   background-color: #000;
   margin: 0 auto;
@@ -22,11 +50,6 @@ main {
   width: 98%;
   width: calc(100% - 3em);
 }
-
-img {
-  border-radius: 4px;
-}
-
 
 /* Main Layout Styles
 ================================ */
@@ -46,16 +69,6 @@ img {
   padding: 0.5em 0;
 }
 
-a,
-.navbar-action button[type=submit]:hover {
-  transition: 0.5s;
-}
-
-a,
-legend {
-  color: rgb(255, 242, 0);
-}
-
 /* Designer's Note: Would like to be able to do :not(.navbar-action a), so those links don't change colors - only 'text' links do. */
 a:focus,
 a:hover {
@@ -63,20 +76,20 @@ a:hover {
   text-decoration: none;
 }
 
-.nav a {
-  /*border-radius: 5px; - Designer's Note: Probably will use this on wide screen. */
-  color: white;
-  background-color: rgb(0, 174, 239);
-  display: block;
-  padding: 10px 20px;
-  text-align: center;
-  text-decoration: none;
+.btn-group-action button {
+  border: solid thin;
+  border-radius: 0;
+  margin: -4px;
 }
 
-.nav a:focus,
-.nav a:hover,
-.navbar-action button[type=submit]:hover {
-  background-color: rgb(96, 225, 100);
+.btn-group-action button:first-child {
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+.btn-group-action button:last-child {
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
 }
 
 h1 {
@@ -132,6 +145,21 @@ blockquote {
 }
 
 /* Bootstrap NavBar */
+.nav a {
+  /*border-radius: 5px; - Designer's Note: Probably will use this on wide screen. */
+  color: white;
+  background-color: rgb(0, 174, 239);
+  display: block;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+}
+
+/*.nav a:focus,
+.nav a:hover,
+.navbar-action button[type=submit]:hover {
+  background-color: rgb(96, 225, 100);
+}*/
 
 .navbar-action .navbar-header,
 .navbar-action .navbar-collapse {
@@ -173,7 +201,7 @@ blockquote {
   position: relative;
   right: 40px; /* should move this next to form element, based on width: calcl() above. */
 }
- .navbar-action button[type=submit]:hover {
+ /*.navbar-action button[type=submit]:hover {
    background-color: #ccc;
 
- }
+ }*/
