@@ -1,6 +1,7 @@
 /* Bootstrap NavBar */
 
-.navbar-action .navbar-header {
+.navbar-action .navbar-header,
+.navbar-action .navbar-collapse {
   margin: 0;
 }
 
