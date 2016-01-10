@@ -35,11 +35,12 @@ button {
   background-color: rgb(255, 242, 0);
   border: none;
   color: black;
-  padding: 8px 10px;
+  padding: 8px;
 }
 
 button:focus,
-button:hover {
+button:hover,
+.active {
   background-color: rgb(96, 225, 100);
 }
 
@@ -77,18 +78,15 @@ a:hover {
 }
 
 .btn-group-action {
+  font-size: 16px; /* Designer's Note: Override font-size to fit on 320px. */
   margin-bottom: 20px;
 }
 
 .btn-group-action button {
   border: solid thin #004989;;
   border-radius: 0;
-  margin: -4px;
-}
-
-.btn-group-action button:focus,
-.btn-group-action button:hover {
-  background-color: rgb(255, 242, 0);
+  margin-left: -4px;
+  margin-right: -4px;
 }
 
 .btn-group-action button:first-child {
@@ -132,7 +130,6 @@ blockquote {
     margin: 4px 4px 4px 0;
     display: inline-block;
   }
-
 }
 
 /*@media (min-width: 1px) and (max-width: 767px) {

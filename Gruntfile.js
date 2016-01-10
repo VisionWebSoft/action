@@ -87,7 +87,7 @@ module.exports = function( grunt ) { // just a node thing
         },
         uglify: {
             build: {
-                src: 'src/js/**/*.js',
+                src: 'src/js/*.js',
                 dest: 'build/js/action.min.js'
             },
             dev: {
