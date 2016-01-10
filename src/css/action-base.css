@@ -76,10 +76,19 @@ a:hover {
   text-decoration: none;
 }
 
+.btn-group-action {
+  margin-bottom: 20px;
+}
+
 .btn-group-action button {
-  border: solid thin;
+  border: solid thin #004989;;
   border-radius: 0;
   margin: -4px;
+}
+
+.btn-group-action button:focus,
+.btn-group-action button:hover {
+  background-color: rgb(255, 242, 0);
 }
 
 .btn-group-action button:first-child {
