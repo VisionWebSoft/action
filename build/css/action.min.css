@@ -56,7 +56,7 @@ legend {
 }
 
 a,
-.navbar-action button[type=submit]:hover {
+button {
   transition: 0.5s;
 }
 
@@ -69,33 +69,40 @@ a:hover {
   text-decoration: none;
 }
 
-.nav a {
-  border-radius: 5px;
+button {
+  border: none;
+}
+
+button + button {
+  margin-left: 0.25em;
+}
+
+button[type=submit],
+button[type=reset] {
+  font-size: 0.8em;
+  padding: 1em;
+  /* Designer's Note: This will look ridiculous on wide screen. */
+}
+
+button[type=submit] {
+  background-color: rgb(255, 242, 0);
+  color: black;
+}
+
+button[type=reset] {
+  background-color: rgb(0, 91, 170);
   color: white;
-  background-color: rgb(0, 174, 239);
-  display: block;
-  padding: 10px 20px;
-  text-align: center;
-  text-decoration: none;
 }
 
 .nav a:focus,
 .nav a:hover,
-.navbar-action button[type=submit]:hover {
+button[type=submit]:hover {
   background-color: rgb(96, 225, 100);
 }
 
-h1 {
-  color: rgb(236, 0, 140);
-  font-size: 1.6em;
-  line-height: 1.2em;
-}
-
-blockquote {
-  color: rgb(0, 174, 239);
-  display: inline-block;
-  margin: 4px;
-  padding: 8px;
+button[type=reset]:hover {
+  background-color: rgb(255, 242, 0);
+  color: black;
 }
 
 .main-logo {
@@ -125,6 +132,7 @@ blockquote {
   }
 }*/
 
+
 /* Forms with Bootstrap 'base' styles. */
 
 .form-action {
@@ -139,6 +147,16 @@ blockquote {
 
 /* Bootstrap NavBar */
 
+.nav a {
+  border-radius: 5px;
+  color: white;
+  background-color: rgb(0, 174, 239);
+  display: block;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+}
+
 .main-header > .navbar-action {
   margin-bottom: 0.25em;
   padding-left: 0.25em;
@@ -147,10 +165,6 @@ blockquote {
 .navbar-action .navbar-header {
   margin: 0;
 }
-/*#login {
-  float: left;
-}
-*/
 
 .navbar-action .navbar-toggle {
   border: none;
@@ -176,18 +190,6 @@ blockquote {
 .navbar-action .form-group {
   display: inline-block;
   width: calc(100% - 80px);
-}
-
-.navbar-action button[type=submit] {
-  background-color: rgb(255, 242, 0);
-  color: black;
-  position: relative;
-  right: 40px;
-  /* should move this next to form element, based on width: calcl() above. */
-}
-
-.navbar-action button[type=submit]:hover {
-  background-color: #ccc;
 }
 
 

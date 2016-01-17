@@ -1,5 +1,15 @@
 /* Bootstrap NavBar */
 
+.nav a {
+  border-radius: 5px;
+  color: white;
+  background-color: rgb(0, 174, 239);
+  display: block;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+}
+
 .main-header > .navbar-action {
   margin-bottom: 0.25em;
   padding-left: 0.25em;
@@ -33,16 +43,4 @@
 .navbar-action .form-group {
   display: inline-block;
   width: calc(100% - 80px);
-}
-
-.navbar-action button[type=submit] {
-  background-color: rgb(255, 242, 0);
-  color: black;
-  position: relative;
-  right: 40px;
-  /* should move this next to form element, based on width: calcl() above. */
-}
-
-.navbar-action button[type=submit]:hover {
-  background-color: #ccc;
 }
