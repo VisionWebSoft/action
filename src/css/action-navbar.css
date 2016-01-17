@@ -1,5 +1,10 @@
 /* Bootstrap NavBar */
 
+.main-header > .navbar-action {
+  margin-bottom: 0.25em;
+  padding-left: 0.25em;
+}
+
 .navbar-action .navbar-header {
   margin: 0;
 }
@@ -16,14 +21,15 @@
   margin-top: 0;
 }
 
+
 /* Prevent bg color from showing when dropdown is toggled. */
+
 .navbar-action .open .dropdown-menu {
   margin-top: -5px;
   margin-bottom: -5px;
 }
 
-.navbar-nav navbar-toggle:hover
-.navbar-action li:hover {
+.navbar-nav navbar-toggle:hover .navbar-action li:hover {
   transition: 0.2s;
 }
 
@@ -37,9 +43,10 @@
   background-color: rgb(255, 242, 0);
   color: black;
   position: relative;
-  right: 40px; /* should move this next to form element, based on width: calcl() above. */
+  right: 40px;
+  /* should move this next to form element, based on width: calcl() above. */
 }
- .navbar-action button[type=submit]:hover {
-   background-color: #ccc;
 
- }
+.navbar-action button[type=submit]:hover {
+  background-color: #ccc;
+}
