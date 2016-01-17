@@ -15,6 +15,10 @@ body {
   font-size: 1.8em;
 }
 
+input {
+  color: black;
+}
+
 main {
   background-color: #000;
   margin: 0 auto;
