@@ -141,18 +141,16 @@ blockquote {
 
 .main-header > .navbar-action {
   margin-bottom: 0.25em;
-
   padding-left: 0.25em;
 }
 
 .navbar-action .navbar-header {
-    margin: 0;
-
+  margin: 0;
 }
-
-#login {
+/*#login {
   float: left;
 }
+*/
 
 .navbar-action .navbar-toggle {
   border: none;
