@@ -36,41 +36,9 @@ legend {
   color: rgb(255, 242, 0);
 }
 
-
-/* Main Layout Styles
-================================ */
-
-.main-header,
-.main-footer {
-  background: url(../images/perf-metal-texture.png);
-  /*  padding: 10px;
-*/
-  /* This padding doesn't seem to help. It just makes .navbar not extend neatly across the display! */
-  text-align: center;
-}
-
-.main-header {
-  border-bottom: outset 3px rgb(236, 0, 140);
-  padding-bottom: 0.5em;
-}
-
-.main-footer {
-  border-top: outset 3px rgb(236, 0, 140);
-  padding: 0.5em 0;
-}
-
 a,
 button {
   transition: 0.5s;
-}
-
-
-/* Designer's Note: Would like to be able to do :not(.navbar-action a), so those links don't change colors - only 'text' links do. */
-
-a:focus,
-a:hover {
-  color: rgb(96, 225, 100);
-  text-decoration: none;
 }
 
 button {
@@ -98,15 +66,47 @@ button[type=reset] {
   color: white;
 }
 
+button[type=reset]:hover {
+  background-color: rgb(255, 242, 0);
+  color: black;
+}
+
+
+/* Main Layout Styles
+================================ */
+
+.main-header,
+.main-footer {
+  background: url(../images/perf-metal-texture.png);
+  /*  padding: 10px;
+*/
+  /* This padding doesn't seem to help. It just makes .navbar not extend neatly across the display! */
+  text-align: center;
+}
+
+.main-header {
+  border-bottom: outset 3px rgb(236, 0, 140);
+  padding-bottom: 0.5em;
+}
+
+.main-footer {
+  border-top: outset 3px rgb(236, 0, 140);
+  padding: 0.5em 0;
+}
+
+
+/* Designer's Note: Would like to be able to do :not(.navbar-action a), so those links don't change colors - only 'text' links do. */
+
+a:focus,
+a:hover {
+  color: rgb(96, 225, 100);
+  text-decoration: none;
+}
+
 .nav a:focus,
 .nav a:hover,
 button[type=submit]:hover {
   background-color: rgb(96, 225, 100);
-}
-
-button[type=reset]:hover {
-  background-color: rgb(255, 242, 0);
-  color: black;
 }
 
 .main-logo {
@@ -119,6 +119,13 @@ button[type=reset]:hover {
   text-align: center;
   text-indent: -20000px;
 }
+
+.fa-lock {
+  /*Designer's Note: This selector may need to become less specific.
+*/
+ padding-left: 4px;
+}
+
 
 @media (min-width: 768px) {
   /* Main Layout Styles
@@ -135,7 +142,6 @@ button[type=reset]:hover {
     margin-top: 12px;
   }
 }*/
-
 
 /* Forms with Bootstrap 'base' styles. */
 
