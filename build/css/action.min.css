@@ -202,6 +202,11 @@ button[type=submit]:hover {
   width: calc(100% - 80px);
 }
 
+.tooltip {
+  display: inline;
+  position: relative;
+}
+
 
 .no-wrap { 
 	white-space: nowrap;	
