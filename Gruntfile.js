@@ -81,13 +81,14 @@ module.exports = function( grunt ) { // just a node thing
 
         // JS Tasks
         jshint: {
-            all: [ 'Gruntfile.js', 'src/js/*.js', '!src/js/jquery.js',
+            all: [ 'Gruntfile.js', 'src/js/*.js',
+                '!src/js/jquery.js',
                 '!src/js/bootstrap.min.js'
             ]
         },
         uglify: {
             build: {
-                src: 'src/js/**/*.js',
+                src: [ 'src/js/*.js', '!src/js/vendor/' ],
                 dest: 'build/js/action.min.js'
             },
             dev: {
@@ -97,7 +98,7 @@ module.exports = function( grunt ) { // just a node thing
                     compress: false,
                     preserveComments: 'all'
                 },
-                src: 'src/js/*.js',
+                src: [ 'src/js/*.js', '!src/js/vendor/' ],
                 dest: 'build/js/action.min.js'
             }
         },
@@ -123,7 +124,9 @@ module.exports = function( grunt ) { // just a node thing
         watch: {
             html: {
                 files: [ 'src/**/*.html' ],
-                tasks: [ 'htmllint', 'bootlint', 'clean:html', 'htmlmin:dev' ]
+                tasks: [ 'htmllint', 'bootlint', 'clean:html',
+                    'htmlmin:dev'
+                ]
             },
             css: {
                 files: [ 'src/css/*.css' ],
@@ -154,12 +157,14 @@ module.exports = function( grunt ) { // just a node thing
     grunt.loadNpmTasks( 'grunt-contrib-watch' );
 
     // Register the task(s).
-    grunt.registerTask( 'default', [ 'htmllint', 'bootlint', 'csslint', 'clean:html',
+    grunt.registerTask( 'default', [ 'htmllint', 'bootlint', 'csslint',
+        'clean:html',
         'clean:images',
         'htmlmin:dev', 'concat', 'jshint', 'uglify:dev', 'imagemin'
     ] );
 
-    grunt.registerTask( 'build', [ 'clean:html', 'clean:images', 'htmlmin:build', 'concat',
+    grunt.registerTask( 'build', [ 'clean:html', 'clean:images',
+        'htmlmin:build', 'concat',
         'cssmin', 'jshint', 'uglify:build', 'imagemin'
     ] );
 };
