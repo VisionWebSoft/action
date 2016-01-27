@@ -29,7 +29,6 @@
 
 <body>
   <header class="main-header">
-
     <nav class="navbar navbar-default navbar-action">
       <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -65,10 +64,6 @@
             </li>
             <li><a href="#">About Us</a></li>
             <li><a href="#">FAQ</a></li>
-            <li><a href="#">Contact Us</a></li>
-            <li><a href="#">Quick Quote <span class="fa fa-lock"></span></a></li>
-            <li><a href="#">Onsite Consultation <span class="fa fa-lock"></span></a></li>
-
           </ul>
 
           <form class="navbar-form navbar-left" role="search">
@@ -83,84 +78,146 @@
       <!-- /.container -->
     </nav>
 
-    <form class="form-action" action="#">
-      <div class="form-group">
-        <label for="fname">First Name:
-          <strong>
-                <abbr title="required">*</abbr>
-              </strong>
-        </label>
-        <input id="fname" type="text" name="fname" required />
+    <div class="btn-group btn-group-action" role="group" aria-label="quick-links">
+      <button type="button" data-toggle="collapse" data-target="#contact-frm-container"
+      aria-expanded="false" aria-controls="contact-frm-container">
+        Contact Us
+        <span class="fa fa-angle-down"></span>
+      </button>
+      <button type="button" data-toggle="collapse" data-target="#price-check-container"
+      aria-expanded="false" aria-controls="price-check-container">Price Check
+        <span class="fa fa-angle-down"></span>
+      </button>
+      <button type="button" data-toggle="collapse" data-target="#consultations-container"
+      aria-expanded="false" aria-controls="consultations-container">Consultations
+        <span class="fa fa-angle-down"></span>
+      </button>
+    </div>
+    <!-- /.btn-group -->
 
-      </div>
-      <!-- /.form-group -->
+    <div class="collapse" id="contact-frm-container">
+      <form class="form-action" action="#">
+        <fieldset>
+          <legend>Your Info</legend>
+          <div class="form-group">
+            <label for="fname">First Name:
+              <strong>
+                  <abbr title="required">*</abbr>
+                </strong>
+            </label>
+            <input id="fname" type="text" name="fname" required />
+          </div>
+          <!-- /.form-group -->
 
-      <div class="form-group">
-        <label for="lname">Last Name:
-          <strong>
-                <abbr title="required">*</abbr>
-              </strong>
-        </label>
-        <input id="lname" type="text" name="lname" required />
+          <div class="form-group">
+            <label for="lname">Last Name:
+              <strong>
+                  <abbr title="required">*</abbr>
+                </strong>
+            </label>
+            <input id="lname" type="text" name="lname" required />
 
-      </div>
-      <!-- /.form-group -->
+          </div>
+          <!-- /.form-group -->
 
-      <div class="form-group">
-        <label for="cname">Company/Organization Name:
-          <strong>
-                <abbr title="required">*</abbr>
-              </strong>
-        </label>
-        <input id="cname" type="text" name="cname" required />
+          <div class="form-group">
+            <label for="cname">Company/Organization Name:
+              <strong>
+                  <abbr title="required">*</abbr>
+                </strong>
+            </label>
+            <input id="cname" type="text" name="cname" required />
 
-      </div>
-      <!-- /.form-group -->
+          </div>
+          <!-- /.form-group -->
 
-      <div class="form-group">
-        <label for="position">Position:
-          <strong>
-                <abbr title="required">*</abbr>
-              </strong>
-        </label>
-        <input id="position" type="text" name="position" required placeholder="Please enter your job title or occupation/role with your Company/Organization"
-        />
+          <div class="form-group">
+            <label for="position">Position:
+              <strong>
+                  <abbr title="required">*</abbr>
+                </strong>
+            </label>
+            <input id="position" type="text" name="position" required placeholder="Please enter your job title or occupation/role with your Company/Organization"
+            />
 
-      </div>
-      <!-- /.form-group -->
+          </div>
+          <!-- /.form-group -->
 
-      <div class="form-group">
-        <label for="email">Email:
-          <strong>
-                <abbr title="required">*</abbr>
-              </strong>
-        </label>
-        <input id="email" type="email" name="email" required />
+          <div class="form-group">
+            <label for="email">Email:
+              <strong>
+                  <abbr title="required">*</abbr>
+                </strong>
+            </label>
+            <input id="email" type="email" name="email" required />
 
-      </div>
-      <!-- /.form-group -->
+          </div>
+          <!-- /.form-group -->
 
-      <div class="form-group">
-        <label for="fone">Contact Phone #:</label>
-        <input id="fone" type="tel" name="fone" />
-      </div>
-      <!-- /.form-group -->
+          <div class="form-group">
+            <label for="fone">Contact Phone #:</label>
+            <input id="fone" type="tel" name="fone" />
+          </div>
+          <!-- /.form-group -->
 
-      <div class="form-group">
-        <label for="msg">How might we help you?
-          <strong>
-                <abbr title="required">*</abbr>
-              </strong>
-        </label>
-        <textarea id="msg" name="msg" required>Please be as descriptive as possible.</textarea>
+          <div class="form-group">
+            <label for="msg">How might we help you?
+              <strong>
+                  <abbr title="required">*</abbr>
+                </strong>
+            </label>
+            <textarea id="msg" name="msg" required>Please be as descriptive as possible.</textarea>
 
-      </div>
-      <!-- /.form-group -->
+          </div>
+          <!-- /.form-group -->
 
-      <button type="submit">Submit</button>
-      <button type="reset">Reset</button>
+        </fieldset>
 
-    </form>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+
+    <div class="collapse" id="price-check-container">
+      <p>Sorry, but to use this online feature, you will need a <a href="#">current client account.</a>        Client account benefits include:
+      </p>
+      <ul>
+        <li>Value-driven pricing tiers</li>
+        <li>Special rewards</li>
+        <li>Complimentary
+          <em>onsite</em> consultation appointments
+          <small>(restrictions apply)</small>
+        </li>
+        <li>Complimentary personal delivery
+          <small>(restrictions apply)</small>
+        </li>
+      </ul>
+      <p><a href="#">Sign up now,</a> or
+        <a href="#">sign in</a> with your existing login.</p>
+      <p>If you just have general questions and/or would like to try us without an account,
+        please call us at:
+        <a href="tel:6189395755">618.939.5755</a> or email: <a href="mailto:hello@actiong.com">hello@actiong.com</a>.</p>
+    </div>
+
+    <div class="collapse" id="consultations-container">
+      <p>Sorry, but to use this online feature, you will need a <a href="#">current client account.</a>        Client account benefits include:
+      </p>
+      <ul>
+        <li>Value-driven pricing tiers</li>
+        <li>Special rewards</li>
+        <li>Complimentary
+          <em>onsite</em> consultation appointments
+          <small>(restrictions apply)</small>
+        </li>
+        <li>Complimentary personal delivery
+          <small>(restrictions apply)</small>
+        </li>
+      </ul>
+      <p><a href="#">Sign up now,</a> or
+        <a href="#">sign in</a> with your existing login.</p>
+      <p>If you just have general questions and/or would like to try us without an account,
+        please call us at:
+        <a href="tel:6189395755">618.939.5755</a> or email: <a href="mailto:hello@actiong.com">hello@actiong.com</a>.</p>
+    </div>
 
     <address>
       <a href="#">hello@actiong.com</a>&nbsp;&bull;&nbsp;<a href="#">618.939.5775</a>&nbsp;&bull;&nbsp;
@@ -200,7 +257,6 @@
     </section>
   </main>
   <footer class="main-footer">
-
     <address>
       <a href="#">8802 Summer Rd.&nbsp;&bull;&nbsp;Columbia, IL&nbsp;&bull;&nbsp;62236</a>
       <br>
@@ -222,12 +278,6 @@
 
   <script type="text/javascript" src="js/vendor/bootstrap.min.js"></script>
   <script type="text/javascript" src="js/action.min.js"></script>
-
-  <script type="text/javascript">
-  $(function() {
-    $('[data-toggle="popover"]').popover()
-  })
-  </script>
 </body>
 
 </html>

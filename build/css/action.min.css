@@ -15,8 +15,32 @@ body {
   font-size: 1.8em;
 }
 
-input {
+a,
+button {
+  transition: 0.5s;
+}
+
+a,
+legend {
+  color: rgb(255, 242, 0);
+}
+
+button,
+img {
+  border-radius: 4px;
+}
+
+button {
+  background-color: rgb(255, 242, 0);
+  border: none;
   color: black;
+  padding: 8px;
+}
+
+button:focus,
+button:hover,
+.active {
+  background-color: rgb(96, 225, 100);
 }
 
 main {
@@ -27,50 +51,6 @@ main {
   width: calc(100% - 3em);
 }
 
-img {
-  border-radius: 4px;
-}
-
-a,
-legend {
-  color: rgb(255, 242, 0);
-}
-
-a,
-button {
-  transition: 0.5s;
-}
-
-button {
-  border: none;
-}
-
-button + button {
-  margin-left: 0.25em;
-}
-
-button[type=submit],
-button[type=reset] {
-  font-size: 0.8em;
-  padding: 1em;
-  /* Designer's Note: This will look ridiculous on wide screen. */
-}
-
-button[type=submit] {
-  background-color: rgb(255, 242, 0);
-  color: black;
-}
-
-button[type=reset] {
-  background-color: rgb(0, 91, 170);
-  color: white;
-}
-
-button[type=reset]:hover {
-  background-color: rgb(255, 242, 0);
-  color: black;
-}
-
 
 /* Main Layout Styles
 ================================ */
@@ -78,9 +58,6 @@ button[type=reset]:hover {
 .main-header,
 .main-footer {
   background: url(../images/perf-metal-texture.png);
-  /*  padding: 10px;
-*/
-  /* This padding doesn't seem to help. It just makes .navbar not extend neatly across the display! */
   text-align: center;
 }
 
@@ -94,19 +71,75 @@ button[type=reset]:hover {
   padding: 0.5em 0;
 }
 
-
-/* Designer's Note: Would like to be able to do :not(.navbar-action a), so those links don't change colors - only 'text' links do. */
-
 a:focus,
 a:hover {
   color: rgb(96, 225, 100);
   text-decoration: none;
 }
 
-.nav a:focus,
-.nav a:hover,
-button[type=submit]:hover {
-  background-color: rgb(96, 225, 100);
+.btn-group-action {
+  font-size: 16px;
+  /* Designer's Note: Override font-size to fit on 320px. */
+  margin-bottom: 20px;
+}
+
+.btn-group-action > button {
+  border: solid thin #004989;
+  ;
+  border-radius: 0;
+  margin-left: -4px;
+  margin-right: -4px;
+}
+
+.btn-group-action > button:first-child {
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+.btn-group-action > button:last-child {
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.collapse > p,
+.collapse > ul,
+.collapsing > p,
+.collapsing > ul {
+  text-align: left;
+}
+
+.collapse,
+.collapsing {
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.collapse,
+.collapsing {
+  padding: 0 .5em;
+}
+
+.collapse li:nth-child(odd),
+.collapsing li:nth-child(odd),
+h1 {
+  color: rgb(236, 0, 140);
+}
+
+.collapse li:nth-child(even),
+.collapsing li:nth-child(even),
+blockquote {
+  color: rgb(0, 174, 239);
+}
+
+h1 {
+  font-size: 1.6em;
+  line-height: 1.2em;
+}
+
+blockquote {
+  display: inline-block;
+  margin: 4px;
+  padding: 8px;
 }
 
 .main-logo {
@@ -119,13 +152,6 @@ button[type=submit]:hover {
   text-align: center;
   text-indent: -20000px;
 }
-
-.fa-lock {
-  /*Designer's Note: This selector may need to become less specific.
-*/
- padding-left: 4px;
-}
-
 
 @media (min-width: 768px) {
   /* Main Layout Styles
@@ -158,7 +184,7 @@ button[type=submit]:hover {
 /* Bootstrap NavBar */
 
 .nav a {
-  border-radius: 5px;
+  /*border-radius: 5px; - Designer's Note: Probably will use this on wide screen. */
   color: white;
   background-color: rgb(0, 174, 239);
   display: block;
@@ -167,12 +193,15 @@ button[type=submit]:hover {
   text-decoration: none;
 }
 
-.main-header > .navbar-action {
-  margin-bottom: 0.25em;
-  padding-left: 0.25em;
-}
 
-.navbar-action .navbar-header {
+/*.nav a:focus,
+.nav a:hover,
+.navbar-action button[type=submit]:hover {
+  background-color: rgb(96, 225, 100);
+}*/
+
+.navbar-action .navbar-header,
+.navbar-action .navbar-collapse {
   margin: 0;
 }
 
@@ -202,10 +231,14 @@ button[type=submit]:hover {
   width: calc(100% - 80px);
 }
 
-.tooltip {
-  display: inline;
+.navbar-action button[type=submit] {
+  background-color: rgb(255, 242, 0);
+  color: black;
   position: relative;
+  right: 40px;
+  /* should move this next to form element, based on width: calcl() above. */
 }
+
 
 
 .no-wrap { 
