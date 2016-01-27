@@ -85,7 +85,6 @@ a:hover {
 
 .btn-group-action > button {
   border: solid thin #004989;
-  ;
   border-radius: 0;
   margin-left: -4px;
   margin-right: -4px;
@@ -137,9 +136,16 @@ h1 {
 }
 
 blockquote {
+  border: none;
+  /* Override Bootstrap */
   display: inline-block;
   margin: 4px;
   padding: 8px;
+}
+
+blockquote p {
+  border-left: solid 0.25em #777;
+  padding-left: 0.5em;
 }
 
 .main-logo {
