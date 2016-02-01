@@ -81,7 +81,7 @@ a:hover {
 }
 
 .btn-group-action > button {
-  border: solid thin #004989;;
+  border: solid thin #004989;
   border-radius: 0;
   margin-left: -4px;
   margin-right: -4px;
@@ -225,9 +225,23 @@ blockquote {
   transition: 0.2s;
 }
 
+.navbar-nav-action {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.navbar-form-action {
+  margin-top: 4px; /* Seems to even out the positioning of elements - probably due to -4px margin on li. */
+  margin-bottom: 0;
+}
+
 .navbar-action .form-control,
 .navbar-action .form-group {
   display: inline-block;
+
+  /* Designer's Note: Keep an eye out for horizontal scrollbars! However, enacting this rule seems to disrupt the flow of the form fields and 'Submit'. */
+  /*overflow-x: hidden;*/
+
   width: calc(100% - 80px);
 }
 
@@ -235,7 +249,7 @@ blockquote {
   background-color: rgb(255, 242, 0);
   color: black;
   position: relative;
-  right: 40px; /* should move this next to form element, based on width: calcl() above. */
+  right: 30px; /* should move this next to form element, based on width: calcl() above. */
 }
  /*.navbar-action button[type=submit]:hover {
    background-color: #ccc;
