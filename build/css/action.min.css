@@ -216,7 +216,11 @@ blockquote {
   margin-bottom: -5px;
 }
 
-.navbar-nav navbar-toggle:hover
+.navbar-action li {
+  margin-bottom: -4px;
+}
+
+/*.navbar-action navbar-toggle:hover*/
 .navbar-action li:hover {
   transition: 0.2s;
 }
