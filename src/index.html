@@ -1,225 +1,221 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-  <title>Action Graphics - "Our Actions Create Great Reactions"</title>
-  <meta name="viewport" content="width=device-width">
+    <title>Action Graphics - "Our Actions Create Great Reactions"</title>
+    <meta name="viewport" content="width=device-width">
 
-  <link rel="stylesheet" href="css/vendor/grid.min.css">
-  <link rel="stylesheet" href="css/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="css/vendor/grid.min.css">
+    <link rel="stylesheet" href="css/vendor/bootstrap.min.css">
 
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
-  <link rel="stylesheet" href="css/action.min.css">
+    <link rel="stylesheet" href="css/action.min.css">
 
-  <!-- Supposedly Typekit needs to be in <head>, and not at bottom as is best practice, typically. -->
-  <script src="https://use.typekit.net/hof0sne.js"></script>
-  <script>
-  try {
-    Typekit.load({
-      async: true
-    });
-  } catch (e) {}
-  </script>
+    <!-- Supposedly Typekit needs to be in <head>, and not at bottom as is best practice, typically. -->
+    <script src="https://use.typekit.net/hof0sne.js"></script>
+    <script>
+      try {
+        Typekit.load({
+          async: true
+        });
+      } catch (e) {}
 
-</head>
+    </script>
 
-<body>
-  <header class="main-header">
-    <nav class="navbar navbar-default navbar-action">
-      <div class="container">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-action"
-          aria-expanded="false">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">Action Graphics - Client Login</a>
-        </div>
+  </head>
 
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="navbar-collapse-action">
+  <body>
+    <header class="main-header">
+      <nav class="navbar navbar-default navbar-action">
+        <div class="container">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-action" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Action Graphics - Client Login</a>
+          </div>
 
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-              aria-expanded="false">Products &amp; Services
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="navbar-collapse-action">
+            <ul class="nav navbar-nav navbar-nav-action">
+              <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Products &amp; Services
                   <span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="#">Apparel</a></li>
-                <li><a href="#">Graphic &amp; Logo Design</a></li>
-                <li><a href="#">Engraving</a></li>
-                <li><a href="#">Print</a></li>
-                <li><a href="#">Promotional Products</a></li>
-                <li><a href="#">Trade Show Displays</a></li>
-                <li><a href="#">Vehicle Graphics</a></li>
-              </ul>
-            </li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">FAQ</a></li>
-          </ul>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Apparel</a></li>
+                  <li><a href="#">Graphic &amp; Logo Design</a></li>
+                  <li><a href="#">Engraving</a></li>
+                  <li><a href="#">Print</a></li>
+                  <li><a href="#">Promotional Products</a></li>
+                  <li><a href="#">Trade Show Displays</a></li>
+                  <li><a href="#">Vehicle Graphics</a></li>
+                </ul>
+              </li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">FAQ</a></li>
+            </ul>
 
-          <form class="navbar-form navbar-left" role="search">
-            <div class="form-group">
-              <input type="text" class="form-control" placeholder="Product Search">
-            </div>
-            <button type="submit" class="btn btn-action-submit">Submit</button>
-          </form>
+            <form class="navbar-form navbar-form-action navbar-left" role="search">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Product Search">
+              </div>
+              <button type="submit" class="btn btn-action-submit">Submit</button>
+            </form>
+          </div>
+          <!-- /.navbar-collapse -->
+
         </div>
-        <!-- /.navbar-collapse -->
+        <!-- /.container -->
+      </nav>
+
+      <div class="btn-group btn-group-action" role="group" aria-label="quick-links">
+        <button type="button" data-toggle="collapse" data-target="#contact-frm-container" aria-expanded="false" aria-controls="contact-frm-container">
+          Contact Us
+          <span class="fa fa-angle-down"></span>
+        </button>
+        <button type="button" data-toggle="collapse" data-target="#price-check-container" aria-expanded="false" aria-controls="price-check-container">Price Check
+          <span class="fa fa-angle-down"></span>
+        </button>
+        <button type="button" data-toggle="collapse" data-target="#consultations-container" aria-expanded="false" aria-controls="consultations-container">Consultations
+          <span class="fa fa-angle-down"></span>
+        </button>
       </div>
-      <!-- /.container -->
-    </nav>
+      <!-- /.btn-group -->
 
-    <div class="btn-group btn-group-action" role="group" aria-label="quick-links">
-      <button type="button" data-toggle="collapse" data-target="#contact-frm-container"
-      aria-expanded="false" aria-controls="contact-frm-container">
-        Contact Us
-        <span class="fa fa-angle-down"></span>
-      </button>
-      <button type="button" data-toggle="collapse" data-target="#price-check-container"
-      aria-expanded="false" aria-controls="price-check-container">Price Check
-        <span class="fa fa-angle-down"></span>
-      </button>
-      <button type="button" data-toggle="collapse" data-target="#consultations-container"
-      aria-expanded="false" aria-controls="consultations-container">Consultations
-        <span class="fa fa-angle-down"></span>
-      </button>
-    </div>
-    <!-- /.btn-group -->
-
-    <div class="collapse" id="contact-frm-container">
-      <form class="form-action" action="#">
-        <fieldset>
-          <legend>Your Info</legend>
-          <div class="form-group">
-            <label for="fname">First Name:
-              <strong>
+      <div class="collapse" id="contact-frm-container">
+        <form class="form-action" action="#">
+          <fieldset>
+            <legend>Your Info</legend>
+            <div class="form-group">
+              <label for="fname">First Name:
+                <strong>
                   <abbr title="required">*</abbr>
                 </strong>
-            </label>
-            <input id="fname" type="text" name="fname" required />
-          </div>
-          <!-- /.form-group -->
+              </label>
+              <input id="fname" type="text" name="fname" required />
+            </div>
+            <!-- /.form-group -->
 
-          <div class="form-group">
-            <label for="lname">Last Name:
-              <strong>
+            <div class="form-group">
+              <label for="lname">Last Name:
+                <strong>
                   <abbr title="required">*</abbr>
                 </strong>
-            </label>
-            <input id="lname" type="text" name="lname" required />
+              </label>
+              <input id="lname" type="text" name="lname" required />
 
-          </div>
-          <!-- /.form-group -->
+            </div>
+            <!-- /.form-group -->
 
-          <div class="form-group">
-            <label for="cname">Company/Organization Name:
-              <strong>
+            <div class="form-group">
+              <label for="cname">Company/Organization Name:
+                <strong>
                   <abbr title="required">*</abbr>
                 </strong>
-            </label>
-            <input id="cname" type="text" name="cname" required />
+              </label>
+              <input id="cname" type="text" name="cname" required />
 
-          </div>
-          <!-- /.form-group -->
+            </div>
+            <!-- /.form-group -->
 
-          <div class="form-group">
-            <label for="position">Position:
-              <strong>
+            <div class="form-group">
+              <label for="position">Position:
+                <strong>
                   <abbr title="required">*</abbr>
                 </strong>
-            </label>
-            <input id="position" type="text" name="position" required placeholder="Please enter your job title or occupation/role with your Company/Organization"
-            />
+              </label>
+              <input id="position" type="text" name="position" required placeholder="Please enter your job title or occupation/role with your Company/Organization"
+              />
 
-          </div>
-          <!-- /.form-group -->
+            </div>
+            <!-- /.form-group -->
 
-          <div class="form-group">
-            <label for="email">Email:
-              <strong>
+            <div class="form-group">
+              <label for="email">Email:
+                <strong>
                   <abbr title="required">*</abbr>
                 </strong>
-            </label>
-            <input id="email" type="email" name="email" required />
+              </label>
+              <input id="email" type="email" name="email" required />
 
-          </div>
-          <!-- /.form-group -->
+            </div>
+            <!-- /.form-group -->
 
-          <div class="form-group">
-            <label for="fone">Contact Phone #:</label>
-            <input id="fone" type="tel" name="fone" />
-          </div>
-          <!-- /.form-group -->
+            <div class="form-group">
+              <label for="fone">Contact Phone #:</label>
+              <input id="fone" type="tel" name="fone" />
+            </div>
+            <!-- /.form-group -->
 
-          <div class="form-group">
-            <label for="msg">How might we help you?
-              <strong>
+            <div class="form-group">
+              <label for="msg">How might we help you?
+                <strong>
                   <abbr title="required">*</abbr>
                 </strong>
-            </label>
-            <textarea id="msg" name="msg" required>Please be as descriptive as possible.</textarea>
+              </label>
+              <textarea id="msg" name="msg" required>Please be as descriptive as possible.</textarea>
 
-          </div>
-          <!-- /.form-group -->
+            </div>
+            <!-- /.form-group -->
 
-        </fieldset>
+          </fieldset>
 
-        <button type="submit">Submit</button>
-      </form>
-    </div>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
 
-    <div class="collapse" id="price-check-container">
-      <p>Sorry, but to use this online feature, you will need a <a href="#">current client account.</a>        Client account benefits include:
-      </p>
-      <ul>
-        <li>Value-driven pricing tiers</li>
-        <li>Special rewards</li>
-        <li>Complimentary
-          <em>onsite</em> consultation appointments
-          <small>(restrictions apply)</small>
-        </li>
-        <li>Complimentary personal delivery
-          <small>(restrictions apply)</small>
-        </li>
-      </ul>
-      <p><a href="#">Sign up now,</a> or
-        <a href="#">sign in</a> with your existing login.</p>
-      <p>If you just have general questions and/or would like to try us without an account,
-        please call us at:
-        <a href="tel:6189395755">618.939.5755</a> or email: <a href="mailto:hello@actiong.com">hello@actiong.com</a>.</p>
-    </div>
+      <div class="collapse" id="price-check-container">
+        <p>Sorry, but to use this online feature, you will need a <a href="#">current client account.</a> Client account benefits
+          include:
+        </p>
+        <ul>
+          <li>Value-driven pricing tiers</li>
+          <li>Special rewards</li>
+          <li>Complimentary
+            <em>onsite</em> consultation appointments
+            <small>(restrictions apply)</small>
+          </li>
+          <li>Complimentary personal delivery
+            <small>(restrictions apply)</small>
+          </li>
+        </ul>
+        <p><a href="#">Sign up now,</a> or
+          <a href="#">sign in</a> with your existing login.</p>
+        <p>If you just have general questions and/or would like to try us without an account, please call us at:
+          <a href="tel:6189395755">618.939.5755</a> or email: <a href="mailto:hello@actiong.com">hello@actiong.com</a>.</p>
+      </div>
 
-    <div class="collapse" id="consultations-container">
-      <p>Sorry, but to use this online feature, you will need a <a href="#">current client account.</a>        Client account benefits include:
-      </p>
-      <ul>
-        <li>Value-driven pricing tiers</li>
-        <li>Special rewards</li>
-        <li>Complimentary
-          <em>onsite</em> consultation appointments
-          <small>(restrictions apply)</small>
-        </li>
-        <li>Complimentary personal delivery
-          <small>(restrictions apply)</small>
-        </li>
-      </ul>
-      <p><a href="#">Sign up now,</a> or
-        <a href="#">sign in</a> with your existing login.</p>
-      <p>If you just have general questions and/or would like to try us without an account,
-        please call us at:
-        <a href="tel:6189395755">618.939.5755</a> or email: <a href="mailto:hello@actiong.com">hello@actiong.com</a>.</p>
-    </div>
+      <div class="collapse" id="consultations-container">
+        <p>Sorry, but to use this online feature, you will need a <a href="#">current client account.</a> Client account benefits
+          include:
+        </p>
+        <ul>
+          <li>Value-driven pricing tiers</li>
+          <li>Special rewards</li>
+          <li>Complimentary
+            <em>onsite</em> consultation appointments
+            <small>(restrictions apply)</small>
+          </li>
+          <li>Complimentary personal delivery
+            <small>(restrictions apply)</small>
+          </li>
+        </ul>
+        <p><a href="#">Sign up now,</a> or
+          <a href="#">sign in</a> with your existing login.</p>
+        <p>If you just have general questions and/or would like to try us without an account, please call us at:
+          <a href="tel:6189395755">618.939.5755</a> or email: <a href="mailto:hello@actiong.com">hello@actiong.com</a>.</p>
+      </div>
 
-    <address>
+      <address>
       <a href="#">hello@actiong.com</a>&nbsp;&bull;&nbsp;<a href="#">618.939.5775</a>&nbsp;&bull;&nbsp;
       <a href="#">
         <span class="fa fa-twitter-square"></span>
@@ -228,38 +224,35 @@
         <span class="fa fa-linkedin-square"></span>
       </a>
     </address>
-  </header>
+    </header>
 
-  <main>
-    <div class="grid-container">
-      <section class="main-banner">
-        <h1>Action Graphics</h1>
-        <p> We are
-          <span class="special-text">the</span> Premier 'One-Stop Shop' for quality,
-          affordable
-          <span class="special-text">all</span> Graphics &amp; Marketing
-        </p>
-        <img class="feat-img" alt src="http://lorempixel.com/400/300" />
+    <main>
+      <div class="grid-container">
+        <section class="main-banner">
+          <h1>Action Graphics</h1>
+          <p> We are
+            <span class="special-text">the</span> Premier 'One-Stop Shop' for quality, affordable
+            <span class="special-text">all</span> Graphics &amp; Marketing
+          </p>
+          <img class="feat-img" alt src="http://lorempixel.com/400/300" />
 
+        </section>
+      </div>
+
+      <section class="grid-container">
+        <blockquote>
+          <h1>Testimonials</h1>
+          <p>"Action Graphics offers diverse services with a professional flair. I have had business cards made, flyers printed,
+            and my car wrap repaired AND removed. There is nothing they can't do! Their service is always with a smile and
+            is done in a timely, convenient manner. I always look forward to doing business with them ~ it is truly a pleasure.
+            They are conveniently located between Waterloo and Columbia which is a huge bonus. Thank you Charity and Manav
+            for your personal interest in my projects and your sincere work!"</p>
+          <small>Candace Chapman CruiseOne, The Chapman Crew</small>
+        </blockquote>
       </section>
-    </div>
-
-    <section class="grid-container">
-      <blockquote>
-        <h1>Testimonials</h1>
-        <p>"Action Graphics offers diverse services with a professional flair. I have
-          had business cards made, flyers printed, and my car wrap repaired AND removed.
-          There is nothing they can't do! Their service is always with a smile and
-          is done in a timely, convenient manner. I always look forward to doing
-          business with them ~ it is truly a pleasure. They are conveniently located
-          between Waterloo and Columbia which is a huge bonus. Thank you Charity
-          and Manav for your personal interest in my projects and your sincere work!"</p>
-        <small>Candace Chapman CruiseOne, The Chapman Crew</small>
-      </blockquote>
-    </section>
-  </main>
-  <footer class="main-footer">
-    <address>
+    </main>
+    <footer class="main-footer">
+      <address>
       <a href="#">8802 Summer Rd.&nbsp;&bull;&nbsp;Columbia, IL&nbsp;&bull;&nbsp;62236</a>
       <br>
       <a href="#">hello@actiong.com</a>&nbsp;&bull;&nbsp;<a href="#">618.939.5775</a>
@@ -271,15 +264,15 @@
         <span class="fa fa-linkedin-square"></span>
       </a>
     </address>
-    <div class="main-logo"><a href="#">Action Graphics &amp; More</a></div>
-    <blockquote>"Action is the foundational key to all success."</blockquote>&nbsp;<i>- Pablo Picasso</i>
-  </footer>
+      <div class="main-logo"><a href="#">Action Graphics &amp; More</a></div>
+      <blockquote>"Action is the foundational key to all success."</blockquote>&nbsp;<i>- Pablo Picasso</i>
+    </footer>
 
-  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
-  <script type="text/javascript" src="js/vendor/bootstrap.min.js"></script>
-  <script type="text/javascript" src="js/action.min.js"></script>
-</body>
+    <script type="text/javascript" src="js/vendor/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/action.min.js"></script>
+  </body>
 
 </html>

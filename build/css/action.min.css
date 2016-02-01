@@ -219,30 +219,46 @@ blockquote,
   margin-top: 0;
 }
 
-
-/* Prevent bg color from showing when dropdown is toggled. */
-
 .navbar-action .open .dropdown-menu {
   margin-top: -5px;
   margin-bottom: -5px;
 }
 
-.navbar-nav navbar-toggle:hover .navbar-action li:hover {
+.navbar-action li {
+  margin-bottom: -4px;
+}
+
+.navbar-action li:hover {
   transition: 0.2s;
+}
+
+.navbar-nav-action {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.navbar-form-action {
+  margin-top: 4px; /* Seems to even out the positioning of elements - probably due to -4px margin on li. */
+  margin-bottom: 0;
 }
 
 .navbar-action .form-control,
 .navbar-action .form-group {
   display: inline-block;
+
+  /* Designer's Note: Keep an eye out for horizontal scrollbars! However, enacting this rule seems to disrupt the flow of the form fields and 'Submit'. This rule WILL disrupt the positioning of form elements in .navbar! */
+  /*overflow-x: hidden;*/
+
   width: calc(100% - 80px);
 }
 
 .navbar-action button[type=submit] {
   background-color: rgb(255, 242, 0);
   color: black;
+
   position: relative;
-  right: 40px;
-  /* should move this next to form element, based on width: calcl() above. */
+  top: 2px; /* Just a nitpicky setting because 'Submit' didn't seem to align quite right without this, for some reason. */
+  right: 30px; /* should move this next to form element, based on width: calcl() above. */
 }
 
 .no-wrap { 
