@@ -31,8 +31,7 @@ a:hover {
   text-decoration: none;
 }
 
-button,
-img {
+button {
   border-radius: 4px;
 }
 
@@ -44,8 +43,7 @@ button {
 }
 
 button:focus,
-button:hover,
-.active {
+button:hover {
   background-color: rgb(96, 225, 100);
 }
 
@@ -57,15 +55,20 @@ main {
   width: calc(100% - 3em);
 }
 
-h1 {
-  font-size: 1.6em;
-  line-height: 1.2em;
-}
-
 h1,
 .collapse li:nth-child(odd),
 .collapsing li:nth-child(odd) {
   color: rgb(236, 0, 140);
+}
+
+h1 {
+  font-size: 1.6em;
+  line-height: 1.2em;
+  margin: 0; /* Override Bootstrap applied margin. */
+}
+
+p {
+  margin: 0.5em 0;
 }
 
 blockquote {
@@ -86,7 +89,6 @@ blockquote,
 .collapsing li:nth-child(even) {
   color: rgb(0, 174, 239);
 }
-
 
 /* Main Layout Styles
 ================================ */

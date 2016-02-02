@@ -1,0 +1,5 @@
+/* Custom overrides on Bootstrap .carousel. */
+.carousel-action {
+  /*background: #000;*/
+  margin: 0 calc(-1em - 10px); /* Makes .carousel go to 'edges' of <main>. */
+}
