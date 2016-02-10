@@ -50,7 +50,7 @@ button:hover {
 main {
   background-color: #000;
   margin: 0 auto;
-  padding: 1em;
+  padding: 0.5em;
   width: 98%;
   width: calc(100% - 3em);
 }
@@ -75,8 +75,8 @@ blockquote {
   border: none;
   /* Override Bootstrap */
   display: inline-block;
-  margin: 4px;
-  padding: 8px;
+  margin: 0;
+  padding: 0;
 }
 
 blockquote p {
@@ -180,7 +180,7 @@ blockquote,
 /* Custom overrides on Bootstrap .carousel. */
 .carousel-action {
   /*background: #000;*/
-  margin: 0 calc(-1em - 10px); /* Makes .carousel go to 'edges' of <main>. */
+  margin: 0 calc(-0.5em - 10px); /* Makes .carousel go to 'edges' of <main>. This needs to be adjusted to coincide with main's padding. */
 }
 
 /* Forms with Bootstrap 'base' styles. */

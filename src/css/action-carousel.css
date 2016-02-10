@@ -1,5 +1,5 @@
 /* Custom overrides on Bootstrap .carousel. */
 .carousel-action {
   /*background: #000;*/
-  margin: 0 calc(-1em - 10px); /* Makes .carousel go to 'edges' of <main>. */
+  margin: 0 calc(-0.5em - 10px); /* Makes .carousel go to 'edges' of <main>. This needs to be adjusted to coincide with main's padding. */
 }
