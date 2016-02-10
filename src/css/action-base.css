@@ -46,7 +46,7 @@ button:hover,
 main {
   background-color: #000;
   margin: 0 auto;
-  padding: 1em;
+  padding: 0.5em;
   width: 98%;
   width: calc(100% - 3em);
 }
