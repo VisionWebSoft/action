@@ -1,29 +1,26 @@
 /* Custom overrides on Bootstrap .carousel. */
 .carousel-action {
-  /*background: #000;*/
   margin: 0 calc(-0.5em - 10px); /* Makes .carousel go to 'edges' of <main>. This needs to be adjusted to coincide with main's padding. */
 }
 
+.carousel-indicators-action,
 .carousel-caption-action {
-  background: white;
-  background: rgba(255, 255, 255, 0.8);
-  padding: 4px;
+  background: black;
+  background: rgba(0, 0, 0, 0.4);
   width: 100%;
-  top: 0; /* Align precisely to top. */
 
   /* The inherit CSS-value causes the element for which it is specified to take the computed value of the property from its parent element. (https://developer.mozilla.org/en-US/docs/Web/CSS/inherit) */
-  right: inherit;
   left: inherit;
-  bottom: inherit;
 }
 
-/*.carouse-action > .carousel-inner {
-  position: relative; /* Allow for positioning of 'info' button. */
-/*}
+.carousel-indicators-action {
+  margin: 0 auto;
+}
 
-.carousel-action > .carousel-inner > .fa-info-circle {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  min-width: 48px;
-}*/
+.carousel-caption-action {
+  padding: 4px;
+
+  top: 0; /* Align precisely to top. */
+  right: inherit;
+  bottom: inherit;
+}
