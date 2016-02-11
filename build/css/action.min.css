@@ -194,6 +194,8 @@ blockquote,
 
 .carousel-indicators-action {
   margin: 0 auto;
+
+  bottom: 0; /* Override BS. */
 }
 
 .carousel-caption-action {
