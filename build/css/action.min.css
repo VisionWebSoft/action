@@ -335,6 +335,7 @@ blockquote,
 /* Designer's Note: The timing of .testimonial will depend on the number of testimonials and will have to be adjusted manually based on the number of entries (until JS is introduced.) */
 .testimonial:first-of-type {
   -webkit-animation: fade 2s ease-out 0.2s forwards, fade 10s ease-out 10.2s reverse forwards;
+  -moz-animation: fade 2s ease-out 0.2s forwards, fade 10s ease-out 10.2s reverse forwards;
   animation: fade 2s ease-out 0.2s forwards, fade 10s ease-out 10.2s reverse forwards;
 }
 
