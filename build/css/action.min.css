@@ -304,6 +304,32 @@ blockquote,
   right: 30px; /* should move this next to form element, based on width: calcl() above. */
 }
 
+@-webkit-keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#testimonials {
+  position: relative;
+}
+
+.testimonial {
+  position: absolute;
+}
+
 .no-wrap { 
 	white-space: nowrap;	
 }
