@@ -10,13 +10,6 @@
   text-decoration: none;
 }
 
-
-/*.nav a:focus,
-.nav a:hover,
-.navbar-action button[type=submit]:hover {
-  background-color: rgb(96, 225, 100);
-}*/
-
 .navbar-action .navbar-header,
 .navbar-action .navbar-collapse {
   margin: 0;
@@ -56,10 +49,7 @@
 .navbar-action .form-control,
 .navbar-action .form-group {
   display: inline-block;
-
-  /* Designer's Note: Keep an eye out for horizontal scrollbars! However, enacting this rule seems to disrupt the flow of the form fields and 'Submit'. This rule WILL disrupt the positioning of form elements in .navbar! */
-  /*overflow-x: hidden;*/
-
+  max-width: 360px; /* Starts to look a bit ridiculous above this mark. */
   width: calc(100% - 80px);
 }
 

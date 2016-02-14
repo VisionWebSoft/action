@@ -14,6 +14,7 @@ body {
   background-size: cover;
   font-family: "myriad-pro", sans-serif;
   font-size: 1.8em;
+  height: 100%;
 }
 
 a,
@@ -51,6 +52,7 @@ main {
   padding: 0.5em;
   width: 98%;
   width: calc(100% - 3em);
+  height: 100%;
 }
 
 h1,
@@ -174,22 +176,6 @@ blockquote,
   text-indent: -20000px;
 }
 
-@media (min-width: 768px) {
-  /* Main Layout Styles
-  ================================ */
-  .nav li {
-    margin: 4px 4px 4px 0;
-    display: inline-block;
-  }
-}
-
-
-/*@media (min-width: 1px) and (max-width: 767px) {
-  .nav li {
-    margin-top: 12px;
-  }
-}*/
-
 /* Custom overrides on Bootstrap .carousel. */
 .carousel-action {
   margin: 0 calc(-0.5em - 10px); /* Makes .carousel go to 'edges' of <main>. This needs to be adjusted to coincide with main's padding. */
@@ -243,13 +229,6 @@ blockquote,
   text-decoration: none;
 }
 
-
-/*.nav a:focus,
-.nav a:hover,
-.navbar-action button[type=submit]:hover {
-  background-color: rgb(96, 225, 100);
-}*/
-
 .navbar-action .navbar-header,
 .navbar-action .navbar-collapse {
   margin: 0;
@@ -289,10 +268,7 @@ blockquote,
 .navbar-action .form-control,
 .navbar-action .form-group {
   display: inline-block;
-
-  /* Designer's Note: Keep an eye out for horizontal scrollbars! However, enacting this rule seems to disrupt the flow of the form fields and 'Submit'. This rule WILL disrupt the positioning of form elements in .navbar! */
-  /*overflow-x: hidden;*/
-
+  max-width: 360px; /* Starts to look a bit ridiculous above this mark. */
   width: calc(100% - 80px);
 }
 
@@ -324,7 +300,7 @@ blockquote,
 }
 
 #testimonials {
-  height: 523px; /* Designer's Note: Must use height of tallest element. Try to keep all sections approximately the same height. */
+  height: 525px; /* Designer's Note: Must use height of tallest element. Try to keep all sections approximately the same height. */
   position: relative;
 }
 
@@ -340,10 +316,23 @@ blockquote,
   animation: fade 2s ease-out 0.2s forwards, fade 10s ease-out 10.2s reverse forwards;
 }
 
-/*.testimonial:nth-of-type(2) {
-  animation: fade 0.8s ease-out 16s reverse backwards;
-  opacity: 0;
-}*/
+@media (min-width: 360px) { /* iPhone 6 */
+  #testimonials {
+    height: 450px;
+  }
+}
+
+@media (min-width: 412px) { /* Google Nexus 6 */
+  #testimonials {
+    height: 350px;
+  }
+}
+
+@media (min-width: 598px) { /* Google Nexus 4 Land */
+  #testimonials {
+    height: 250px;
+  }
+}
 
 .no-wrap { 
 	white-space: nowrap;	
