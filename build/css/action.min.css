@@ -33,12 +33,9 @@ a:hover {
 }
 
 button {
-  border-radius: 4px;
-}
-
-button {
   background-color: rgb(255, 242, 0);
   border: none;
+  border-radius: 4px;
   color: black;
   padding: 8px;
 }
@@ -70,6 +67,21 @@ h1 {
 
 p {
   margin: 0.5em 0;
+}
+
+p button { /* This will be buttons in the middle of paragraphs, as opposed to 'form' and 'nav' buttons. */
+  background-color: rgb(236, 0, 140);
+  color: white;
+  border: solid white 2px;
+  display: block;
+  margin: 0 auto;
+  max-width: 180px;
+  width: 70%;
+}
+
+p button:focus,
+p button:hover {
+  border: rgb(255, 242, 0);
 }
 
 blockquote {
@@ -292,6 +304,46 @@ blockquote,
   top: 2px; /* Just a nitpicky setting because 'Submit' didn't seem to align quite right without this, for some reason. */
   right: 30px; /* should move this next to form element, based on width: calcl() above. */
 }
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#testimonials {
+  height: 523px; /* Designer's Note: Must use height of tallest element. Try to keep all sections approximately the same height. */
+  position: relative;
+}
+
+.testimonial {
+  opacity: 0;
+  position: absolute;
+}
+
+/* Designer's Note: The timing of .testimonial will depend on the number of testimonials and will have to be adjusted manually based on the number of entries (until JS is introduced.) */
+.testimonial:first-of-type {
+  -webkit-animation: fade 2s ease-out 0.2s forwards, fade 10s ease-out 10.2s reverse forwards;
+  -moz-animation: fade 2s ease-out 0.2s forwards, fade 10s ease-out 10.2s reverse forwards;
+  animation: fade 2s ease-out 0.2s forwards, fade 10s ease-out 10.2s reverse forwards;
+}
+
+/*.testimonial:nth-of-type(2) {
+  animation: fade 0.8s ease-out 16s reverse backwards;
+  opacity: 0;
+}*/
 
 .no-wrap { 
 	white-space: nowrap;	
