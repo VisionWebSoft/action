@@ -18,7 +18,8 @@ body {
 }
 
 a,
-button {
+button,
+.button {
   transition: 0.5s;
 }
 
@@ -36,13 +37,14 @@ a:hover {
 button {
   background-color: rgb(255, 242, 0);
   border: none;
-  border-radius: 4px;
   color: black;
   padding: 8px;
 }
 
 button:focus,
-button:hover {
+button:hover,
+.button:focus,
+.button:hover {
   background-color: rgb(96, 225, 100);
 }
 
@@ -150,9 +152,13 @@ blockquote,
   margin-bottom: 8px;
 }
 
-.btn-group-action > button {
+.btn-group-action > button,
+.btn-group-action > .button {
   border: solid thin #004989;
   border-radius: 0;
+}
+
+.btn-group-action > button {
   margin-left: -4px;
   margin-right: -4px;
 }
@@ -162,15 +168,19 @@ blockquote,
   border-bottom-left-radius: 4px;
 }
 
-.btn-group-action > button:last-child {
+.btn-group-action > .button:last-child {
   border-top-right-radius: 4px;
   border-bottom-right-radius: 4px;
 }
 
-.button-signin {
+.button {
   background-color: rgb(236, 0, 140);
   color: white;
-  border: solid white 2px;
+  padding: 9px; /* Designers' Note: This doesn't keep the same height as its siblings, so we use this 'hack'...strange! */
+}
+
+p .button-center {
+  border: solid white 2px; /* Buttons that are 'by themselves.' */
 }
 
 .main-logo {
