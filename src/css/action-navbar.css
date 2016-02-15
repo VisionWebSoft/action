@@ -27,6 +27,11 @@
   margin-bottom: -5px;
 }
 
+.navbar-action p {
+  margin-left: 15px;
+  float: left !important; /* A la Bootstrap. */
+}
+
 .navbar-action li {
   margin-bottom: -4px;
 }
@@ -62,11 +67,15 @@
   top: 2px; /* Just a nitpicky setting because 'Submit' didn't seem to align quite right without this, for some reason. */
 }
 
+/***
+  *** Media Queries ***
+***/
+
 @media (min-width: 768px) {
-  .navbar-action > .container .navbar-brand {
-    margin-left: 0; /* Override BS */
-    padding-top: 8px;
+  .navbar-action p {
+    display: none; 
   }
+
   .navbar-action .dropdown-menu {
     padding: 0;
     width: 100%;
