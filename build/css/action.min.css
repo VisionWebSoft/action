@@ -182,13 +182,6 @@ blockquote,
   }
 }
 
-
-/*@media (min-width: 1px) and (max-width: 767px) {
-  .nav li {
-    margin-top: 12px;
-  }
-}*/
-
 /* Custom overrides on Bootstrap .carousel. */
 .carousel-action {
   margin: 0 calc(-0.5em - 10px); /* Makes .carousel go to 'edges' of <main>. This needs to be adjusted to coincide with main's padding. */

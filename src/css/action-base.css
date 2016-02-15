@@ -181,10 +181,3 @@ blockquote,
     display: inline-block;
   }
 }
-
-
-/*@media (min-width: 1px) and (max-width: 767px) {
-  .nav li {
-    margin-top: 12px;
-  }
-}*/
