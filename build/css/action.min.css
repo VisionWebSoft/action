@@ -251,6 +251,9 @@ blockquote,
 }
 
 .navbar-action li:hover {
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -o-transition: 0.2s;
   transition: 0.2s;
 }
 
@@ -319,6 +322,17 @@ blockquote,
 
   .navbar-action button[type=submit] {
     margin: 0.5em; /* Some 'breathing room!' */
+  }
+}
+
+@media (min-width: 992px) {
+  .navbar-form-action {
+    margin-top: 0;
+    margin-left: 15px;
+  }
+  .navbar-action button[type=submit] {
+    margin-top: 0;
+    margin-bottom: 8px;
   }
 }
 
