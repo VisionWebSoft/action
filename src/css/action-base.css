@@ -46,6 +46,11 @@ button:hover {
   background-color: rgb(96, 225, 100);
 }
 
+address span {
+  display: inline-block;
+  margin: 0 4px;
+}
+
 main {
   background-color: #000;
   margin: 0 auto;
@@ -121,6 +126,24 @@ blockquote,
   padding: 0.5em 0;
 }
 
+.collapse > p,
+.collapse > ul,
+.collapsing > p,
+.collapsing > ul {
+  text-align: left;
+}
+
+.collapse,
+.collapsing {
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.collapse,
+.collapsing {
+  padding: 0 .5em;
+}
+
 .btn-group-action {
   font-size: 16px;
   /* Designer's Note: Override font-size to fit on 320px. */
@@ -150,24 +173,6 @@ blockquote,
   border: solid white 2px;
 }
 
-.collapse > p,
-.collapse > ul,
-.collapsing > p,
-.collapsing > ul {
-  text-align: left;
-}
-
-.collapse,
-.collapsing {
-  background: rgb(0, 0, 0);
-  background: rgba(0, 0, 0, 0.5);
-}
-
-.collapse,
-.collapsing {
-  padding: 0 .5em;
-}
-
 .main-logo {
   background: url(../images/logo.png) no-repeat center / contain;
   direction: ltr;
@@ -177,4 +182,18 @@ blockquote,
   margin: 10px auto;
   text-align: center;
   text-indent: -20000px;
+}
+
+@media (min-width: 768px) {
+  .grid-container div {
+    display: inline-block;
+  }
+
+  .grid-container div:first-child {
+    margin-left: -15px;
+  }
+
+  .grid-container div:last-child {
+    margin-left: 8px;
+  }
 }

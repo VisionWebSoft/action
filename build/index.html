@@ -92,7 +92,7 @@
         <button type="button" data-toggle="collapse" data-target="#consultations-container" aria-expanded="false" aria-controls="consultations-container">Consultations
           <span class="fa fa-angle-down"></span>
         </button>
-        <button type="button" data-toggle="collapse" data-target="#signin-container" aria-expanded="false" aria-controls="consultations-container" class="button-signin mobile-hide">Client Sign-In
+        <button type="button" data-toggle="collapse" data-target="#signin-container" aria-expanded="false" aria-controls="consultations-container" class="button-signin hide-mobile">Client Sign-In
           <span class="fa fa-angle-down"></span>
         </button>
       </div>
@@ -102,65 +102,73 @@
         <form class="form-action" action="#">
           <fieldset>
             <legend>Your Info</legend>
-            <div class="form-group">
-              <label for="fname">First Name:
-                <strong>
+            <div class="grid-container">
+              <div class="form-group grid-6">
+                <label for="fname">First Name:
+                  <strong>
                   <abbr title="required">*</abbr>
                 </strong>
-              </label>
-              <input id="fname" type="text" name="fname" required>
-            </div>
-            <!-- /.form-group -->
+                </label>
+                <input id="fname" type="text" name="fname" required>
+              </div>
+              <!-- /.form-group -->
 
-            <div class="form-group">
-              <label for="lname">Last Name:
-                <strong>
+              <div class="form-group grid-6">
+                <label for="lname">Last Name:
+                  <strong>
                   <abbr title="required">*</abbr>
                 </strong>
-              </label>
-              <input id="lname" type="text" name="lname" required>
+                </label>
+                <input id="lname" type="text" name="lname" required>
 
+              </div>
+              <!-- /.form-group -->
             </div>
-            <!-- /.form-group -->
+            <!-- /.grid-container -->
 
-            <div class="form-group">
-              <label for="cname">Company/Organization Name:
-                <strong>
+            <div class="grid-container">
+              <div class="form-group grid-5">
+                <label for="cname">Company/Organization Name:
+                  <strong>
                   <abbr title="required">*</abbr>
                 </strong>
-              </label>
-              <input id="cname" type="text" name="cname" required>
+                </label>
+                <input id="cname" type="text" name="cname" required>
 
-            </div>
-            <!-- /.form-group -->
+              </div>
+              <!-- /.form-group -->
 
-            <div class="form-group">
-              <label for="position">Position:
-                <strong>
+              <div class="form-group grid-7">
+                <label for="position">Position:
+                  <strong>
                   <abbr title="required">*</abbr>
                 </strong>
-              </label>
-              <input id="position" type="text" name="position" required placeholder="Please enter your job title or occupation/role with your Company/Organization">
-
+                </label>
+                <input id="position" type="text" name="position" required placeholder="Please enter your job title or occupation/role with your Company/Organization">
+              </div>
+              <!-- /.form-group -->
             </div>
-            <!-- /.form-group -->
+            <!-- /.grid-container -->
 
-            <div class="form-group">
-              <label for="email">Email:
-                <strong>
+            <div class="grid-container">
+              <div class="form-group grid-6">
+                <label for="email">Email:
+                  <strong>
                   <abbr title="required">*</abbr>
                 </strong>
-              </label>
-              <input id="email" type="email" name="email" required>
+                </label>
+                <input id="email" type="email" name="email" required>
 
-            </div>
-            <!-- /.form-group -->
+              </div>
+              <!-- /.form-group -->
 
-            <div class="form-group">
-              <label for="fone">Contact Phone #:</label>
-              <input id="fone" type="tel" name="fone">
+              <div class="form-group grid-6">
+                <label for="fone">Contact Phone #:</label>
+                <input id="fone" type="tel" name="fone">
+              </div>
+              <!-- /.form-group -->
             </div>
-            <!-- /.form-group -->
+            <!-- /.grid-container -->
 
             <div class="form-group">
               <label for="msg">How might we help you?
@@ -224,22 +232,23 @@
       <!-- /.collapse -->
 
       <address>
-      <a href="#">hello@actiong.com</a>&nbsp;&bull;&nbsp;<a href="#">618.939.5775</a>&nbsp;&bull;&nbsp;
-          <a href="#">
+
+      <a href="#">hello@actiong.com</a>&nbsp;&bull;&nbsp;<a href="#">618.939.5775</a>
+      <div class="no-wrap">  <a href="#">
         <span class="fa fa-linkedin-square fa-2x"></span>
       </a>
       <a href="#">
         <span class="fa fa-twitter-square fa-2x"></span>
       </a>
       <a href="#">
-        <span class="fa fa-facebook-official fa-2x"></span>
-      </a>
+        <span class="fa fa-facebook-square fa-2x"></span>
+      </a></div><!-- /.no-wrap -->
     </address>
     </header>
 
     <main>
       <div class="grid-container">
-        <section class="main-banner">
+        <section class="main-banner grid-6">
           <h1>Action Graphics</h1>
           <p> We are <span class="special-text">a premier resource</span> for graphics, logos and cutom branded marketing materials.</p>
 
@@ -349,42 +358,45 @@
           </div>
           <!-- .carousel -->
         </section>
+
+        <section class="grid-6" id="testimonials">
+          <blockquote>
+            <h1>Testimonials</h1>
+            <div class="testimonial">
+              <p>"Action Graphics offers diverse services with a professional flair. I have had business cards made, flyers
+                printed, and my car wrap repaired AND removed. There is nothing they can't do! Their service is always with
+                a smile and is done in a timely, convenient manner. I always look forward to doing business with them ~ it
+                is truly a pleasure... Thank you Charity and Manav for your personal interest in my projects and your sincere
+                work!"
+              </p>
+              <small>&ndash;&nbsp;Candace Chapman, CruiseOne - The Chapman Crew</small>
+            </div>
+            <!-- /.testimonial -->
+
+            <!-- <div class="testimonial">
+            <p>"Action Graphics offers diverse services with a professional flair. I have had business cards made, flyers printed,
+              and my car wrap repaired AND removed. There is nothing they can't do! Their service is always with a smile
+              and is done in a timely, convenient manner. I always look forward to doing business with them ~ it is truly
+              a pleasure...Thank you Charity and Manav for your personal interest in my projects and your sincere work!"</p>
+            <small>&ndash;&nbsp;Candace Chapman, CruiseOne - The Chapman Crew</small>
+          </div> -->
+            <!-- /.testimonial -->
+
+            <!-- <div class="testimonial">
+            <p>"Action Graphics offers diverse services with a professional flair. I have had business cards made, flyers printed,
+              and my car wrap repaired AND removed. There is nothing they can't do! Their service is always with a smile
+              and is done in a timely, convenient manner. I always look forward to doing business with them ~ it is truly
+              a pleasure...Thank you Charity and Manav for your personal interest in my projects and your sincere work!"</p>
+            <small>&ndash;&nbsp;Candace Chapman, CruiseOne - The Chapman Crew</small>
+          </div> -->
+            <!-- /.testimonial -->
+
+          </blockquote>
+        </section>
       </div>
       <!-- /.grid-container -->
-
-      <section class="grid-container" id="testimonials">
-        <blockquote>
-          <h1>Testimonials</h1>
-          <div class="testimonial">
-            <p>"Action Graphics offers diverse services with a professional flair. I have had business cards made, flyers printed,
-              and my car wrap repaired AND removed. There is nothing they can't do! Their service is always with a smile
-              and is done in a timely, convenient manner. I always look forward to doing business with them ~ it is truly
-              a pleasure... Thank you Charity and Manav for your personal interest in my projects and your sincere work!"</p>
-            <small>&ndash;&nbsp;Candace Chapman, CruiseOne - The Chapman Crew</small>
-          </div>
-          <!-- /.testimonial -->
-
-          <!-- <div class="testimonial">
-            <p>"Action Graphics offers diverse services with a professional flair. I have had business cards made, flyers printed,
-              and my car wrap repaired AND removed. There is nothing they can't do! Their service is always with a smile
-              and is done in a timely, convenient manner. I always look forward to doing business with them ~ it is truly
-              a pleasure...Thank you Charity and Manav for your personal interest in my projects and your sincere work!"</p>
-            <small>&ndash;&nbsp;Candace Chapman, CruiseOne - The Chapman Crew</small>
-          </div> -->
-          <!-- /.testimonial -->
-
-          <!-- <div class="testimonial">
-            <p>"Action Graphics offers diverse services with a professional flair. I have had business cards made, flyers printed,
-              and my car wrap repaired AND removed. There is nothing they can't do! Their service is always with a smile
-              and is done in a timely, convenient manner. I always look forward to doing business with them ~ it is truly
-              a pleasure...Thank you Charity and Manav for your personal interest in my projects and your sincere work!"</p>
-            <small>&ndash;&nbsp;Candace Chapman, CruiseOne - The Chapman Crew</small>
-          </div> -->
-          <!-- /.testimonial -->
-
-        </blockquote>
-      </section>
     </main>
+
     <footer class="main-footer">
       <address>
       <a href="#">8802 Summer Rd.&nbsp;&bull;&nbsp;Columbia, IL&nbsp;&bull;&nbsp;62236</a>
@@ -392,7 +404,8 @@
       <a href="#">hello@actiong.com</a>&nbsp;&bull;&nbsp;<a href="#">618.939.5775</a>
       <br>
 
-      <a href="#">
+      <div class="no-wrap">
+        <a href="#">
         <span class="fa fa-linkedin-square fa-2x"></span>
       </a>
 
@@ -403,7 +416,7 @@
       <a href="#">
         <span class="fa fa-facebook-square fa-2x"></span>
       </a>
-
+    </div><!-- /.no-wrap -->
     </address>
       <div class="main-logo"><a href="#">Action Graphics &amp; More</a></div>
       <blockquote>"Action is the foundational key to all success."</blockquote>&nbsp;<i class="no-wrap">- Pablo Picasso</i>
