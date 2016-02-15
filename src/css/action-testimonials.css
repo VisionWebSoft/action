@@ -17,7 +17,7 @@
 }
 
 #testimonials {
-  height: 523px; /* Designer's Note: Must use height of tallest element. Try to keep all sections approximately the same height. */
+  height: 525px; /* Designer's Note: Must use height of tallest element. Try to keep all sections approximately the same height. */
   position: relative;
 }
 
@@ -33,7 +33,20 @@
   animation: fade 2s ease-out 0.2s forwards, fade 10s ease-out 10.2s reverse forwards;
 }
 
-/*.testimonial:nth-of-type(2) {
-  animation: fade 0.8s ease-out 16s reverse backwards;
-  opacity: 0;
-}*/
+@media (min-width: 360px) { /* iPhone 6 */
+  #testimonials {
+    height: 450px;
+  }
+}
+
+@media (min-width: 412px) { /* Google Nexus 6 */
+  #testimonials {
+    height: 350px;
+  }
+}
+
+@media (min-width: 598px) { /* Google Nexus 4 Land */
+  #testimonials {
+    height: 250px;
+  }
+}

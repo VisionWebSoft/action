@@ -11,8 +11,10 @@ body {
   color: #fff;
   background-color: #edeff0;
   background: url(../images/carbon-fiber-bg1.png);
+  background-size: cover;
   font-family: "myriad-pro", sans-serif;
   font-size: 1.8em;
+  height: 100%;
 }
 
 a,
@@ -50,6 +52,7 @@ main {
   padding: 0.5em;
   width: 98%;
   width: calc(100% - 3em);
+  height: 100%;
 }
 
 h1,
@@ -69,9 +72,6 @@ p {
 }
 
 p button { /* This will be buttons in the middle of paragraphs, as opposed to 'form' and 'nav' buttons. */
-  background-color: rgb(236, 0, 140);
-  color: white;
-  border: solid white 2px;
   display: block;
   margin: 0 auto;
   max-width: 180px;
@@ -124,7 +124,7 @@ blockquote,
 .btn-group-action {
   font-size: 16px;
   /* Designer's Note: Override font-size to fit on 320px. */
-  margin-bottom: 20px;
+  margin-bottom: 8px;
 }
 
 .btn-group-action > button {
@@ -142,6 +142,12 @@ blockquote,
 .btn-group-action > button:last-child {
   border-top-right-radius: 4px;
   border-bottom-right-radius: 4px;
+}
+
+.button-signin {
+  background-color: rgb(236, 0, 140);
+  color: white;
+  border: solid white 2px;
 }
 
 .collapse > p,
@@ -171,15 +177,6 @@ blockquote,
   margin: 10px auto;
   text-align: center;
   text-indent: -20000px;
-}
-
-@media (min-width: 768px) {
-  /* Main Layout Styles
-  ================================ */
-  .nav li {
-    margin: 4px 4px 4px 0;
-    display: inline-block;
-  }
 }
 
 /* Custom overrides on Bootstrap .carousel. */
@@ -226,7 +223,6 @@ blockquote,
 /* Bootstrap NavBar */
 
 .nav a {
-  /*border-radius: 5px; - Designer's Note: Probably will use this on wide screen. */
   color: white;
   background-color: rgb(0, 174, 239);
   display: block;
@@ -235,12 +231,9 @@ blockquote,
   text-decoration: none;
 }
 
-
-/*.nav a:focus,
-.nav a:hover,
-.navbar-action button[type=submit]:hover {
-  background-color: rgb(96, 225, 100);
-}*/
+.navbar-action {
+  margin-bottom: 8px;
+}
 
 .navbar-action .navbar-header,
 .navbar-action .navbar-collapse {
@@ -260,11 +253,19 @@ blockquote,
   margin-bottom: -5px;
 }
 
+.navbar-action p {
+  margin-left: 15px;
+  float: left !important; /* A la Bootstrap. */
+}
+
 .navbar-action li {
   margin-bottom: -4px;
 }
 
 .navbar-action li:hover {
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -o-transition: 0.2s;
   transition: 0.2s;
 }
 
@@ -281,11 +282,7 @@ blockquote,
 .navbar-action .form-control,
 .navbar-action .form-group {
   display: inline-block;
-
-  /* Designer's Note: Keep an eye out for horizontal scrollbars! However, enacting this rule seems to disrupt the flow of the form fields and 'Submit'. This rule WILL disrupt the positioning of form elements in .navbar! */
-  /*overflow-x: hidden;*/
-
-  width: calc(100% - 80px);
+  max-width: 550px;
 }
 
 .navbar-action button[type=submit] {
@@ -294,7 +291,63 @@ blockquote,
 
   position: relative;
   top: 2px; /* Just a nitpicky setting because 'Submit' didn't seem to align quite right without this, for some reason. */
-  right: 30px; /* should move this next to form element, based on width: calcl() above. */
+}
+
+/***
+  *** Media Queries ***
+***/
+
+@media (min-width: 768px) {
+  .navbar-action p {
+    display: none;
+  }
+
+  .navbar-action .dropdown-menu {
+    padding: 0;
+    width: 100%;
+  }
+
+  .navbar-action .open .dropdown-menu {
+    margin-top: 0;
+  }
+
+.navbar-nav-action {
+  margin-left: 0;
+}
+
+  .navbar-action .navbar-nav-action > .open > a:hover,
+  .navbar-action .navbar-nav-action > .open > a:focus,
+  .navbar-action .navbar-nav-action > .active > a,
+  .navbar-action ul > li > a {
+    color: white;
+  }
+
+  .navbar-action .navbar-nav-action > .active > a,
+  .navbar-action ul > li > a {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+  }
+
+  .navbar-action ul > li:first-child > a,
+  .navbar-nav-action ul > li:last-child > a {
+    border-bottom-left-radius: 4px;
+  }
+
+  .navbar-action ul > li:last-child > a {
+    border-bottom-right-radius: 4px;
+  }
+
+  .navbar-form-action {
+    margin-top: 0;
+    margin-left: 15px;
+    padding-left: 0;
+  }
+
+  .navbar-action button[type=submit] {
+    margin-top: 0;
+    margin-bottom: 8px;
+    margin-left: 0.5em; /* Some 'breathing room!' */
+  }
 }
 
 @-webkit-keyframes fade {
@@ -316,7 +369,7 @@ blockquote,
 }
 
 #testimonials {
-  height: 523px; /* Designer's Note: Must use height of tallest element. Try to keep all sections approximately the same height. */
+  height: 525px; /* Designer's Note: Must use height of tallest element. Try to keep all sections approximately the same height. */
   position: relative;
 }
 
@@ -332,11 +385,34 @@ blockquote,
   animation: fade 2s ease-out 0.2s forwards, fade 10s ease-out 10.2s reverse forwards;
 }
 
-/*.testimonial:nth-of-type(2) {
-  animation: fade 0.8s ease-out 16s reverse backwards;
-  opacity: 0;
-}*/
+@media (min-width: 360px) { /* iPhone 6 */
+  #testimonials {
+    height: 450px;
+  }
+}
 
-.no-wrap { 
-	white-space: nowrap;	
+@media (min-width: 412px) { /* Google Nexus 6 */
+  #testimonials {
+    height: 350px;
+  }
+}
+
+@media (min-width: 598px) { /* Google Nexus 4 Land */
+  #testimonials {
+    height: 250px;
+  }
+}
+
+.mobile-hide {
+	display: none;
+}
+
+.no-wrap {
+	white-space: nowrap;
+}
+
+@media (min-width: 768px) {
+	.mobile-hide {
+		display: inline-block;
+	}
 }
