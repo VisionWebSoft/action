@@ -93,7 +93,7 @@
           <span class="fa fa-angle-down"></span>
         </button>
         <button type="button" data-toggle="collapse" data-target="#signin-container" aria-expanded="false" aria-controls="consultations-container"
-        class="button-signin mobile-hide">Client Sign-In
+        class="button-signin hide-mobile">Client Sign-In
           <span class="fa fa-angle-down"></span>
         </button>
       </div>
@@ -103,66 +103,74 @@
         <form class="form-action" action="#">
           <fieldset>
             <legend>Your Info</legend>
-            <div class="form-group">
-              <label for="fname">First Name:
-                <strong>
+            <div class="grid-container">
+              <div class="form-group grid-6">
+                <label for="fname">First Name:
+                  <strong>
                   <abbr title="required">*</abbr>
                 </strong>
-              </label>
-              <input id="fname" type="text" name="fname" required />
-            </div>
-            <!-- /.form-group -->
+                </label>
+                <input id="fname" type="text" name="fname" required />
+              </div>
+              <!-- /.form-group -->
 
-            <div class="form-group">
-              <label for="lname">Last Name:
-                <strong>
+              <div class="form-group grid-6">
+                <label for="lname">Last Name:
+                  <strong>
                   <abbr title="required">*</abbr>
                 </strong>
-              </label>
-              <input id="lname" type="text" name="lname" required />
+                </label>
+                <input id="lname" type="text" name="lname" required />
 
+              </div>
+              <!-- /.form-group -->
             </div>
-            <!-- /.form-group -->
+            <!-- /.grid-container -->
 
-            <div class="form-group">
-              <label for="cname">Company/Organization Name:
-                <strong>
+            <div class="grid-container">
+              <div class="form-group grid-5">
+                <label for="cname">Company/Organization Name:
+                  <strong>
                   <abbr title="required">*</abbr>
                 </strong>
-              </label>
-              <input id="cname" type="text" name="cname" required />
+                </label>
+                <input id="cname" type="text" name="cname" required />
 
-            </div>
-            <!-- /.form-group -->
+              </div>
+              <!-- /.form-group -->
 
-            <div class="form-group">
-              <label for="position">Position:
-                <strong>
+              <div class="form-group grid-7">
+                <label for="position">Position:
+                  <strong>
                   <abbr title="required">*</abbr>
                 </strong>
-              </label>
-              <input id="position" type="text" name="position" required placeholder="Please enter your job title or occupation/role with your Company/Organization"
-              />
-
+                </label>
+                <input id="position" type="text" name="position" required placeholder="Please enter your job title or occupation/role with your Company/Organization"
+                />
+              </div>
+              <!-- /.form-group -->
             </div>
-            <!-- /.form-group -->
+            <!-- /.grid-container -->
 
-            <div class="form-group">
-              <label for="email">Email:
-                <strong>
+            <div class="grid-container hide-mobile">
+              <div class="form-group grid-6">
+                <label for="email">Email:
+                  <strong>
                   <abbr title="required">*</abbr>
                 </strong>
-              </label>
-              <input id="email" type="email" name="email" required />
+                </label>
+                <input id="email" type="email" name="email" required />
 
-            </div>
-            <!-- /.form-group -->
+              </div>
+              <!-- /.form-group -->
 
-            <div class="form-group">
-              <label for="fone">Contact Phone #:</label>
-              <input id="fone" type="tel" name="fone" />
+              <div class="form-group grid-6">
+                <label for="fone">Contact Phone #:</label>
+                <input id="fone" type="tel" name="fone" />
+              </div>
+              <!-- /.form-group -->
             </div>
-            <!-- /.form-group -->
+            <!-- /.grid-container -->
 
             <div class="form-group">
               <label for="msg">How might we help you?
