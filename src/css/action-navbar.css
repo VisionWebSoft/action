@@ -50,7 +50,6 @@
 .navbar-action .form-group {
   display: inline-block;
   max-width: 360px; /* Starts to look a bit ridiculous above this mark. */
-  width: calc(100% - 80px);
 }
 
 .navbar-action button[type=submit] {
@@ -59,5 +58,4 @@
 
   position: relative;
   top: 2px; /* Just a nitpicky setting because 'Submit' didn't seem to align quite right without this, for some reason. */
-  right: 30px; /* should move this next to form element, based on width: calcl() above. */
 }
