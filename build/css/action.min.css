@@ -279,6 +279,10 @@ blockquote,
 }
 
 @media (min-width: 768px) {
+  .navbar-action > .container .navbar-brand {
+    margin-left: 0; /* Override BS */
+    padding-top: 8px;
+  }
   .navbar-action .dropdown-menu {
     padding: 0;
     width: 100%;
@@ -307,6 +311,14 @@ blockquote,
 
   .navbar-action ul > li:last-child > a {
     border-bottom-right-radius: 4px;
+  }
+
+  .navbar-form {
+    padding-left: 0;
+  }
+
+  .navbar-action button[type=submit] {
+    margin: 0.5em; /* Some 'breathing room!' */
   }
 }
 
