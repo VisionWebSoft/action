@@ -127,7 +127,7 @@ blockquote,
 .btn-group-action {
   font-size: 16px;
   /* Designer's Note: Override font-size to fit on 320px. */
-  margin-bottom: 20px;
+  margin-bottom: 8px;
 }
 
 .btn-group-action > button {

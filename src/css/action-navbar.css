@@ -9,6 +9,10 @@
   text-decoration: none;
 }
 
+.navbar-action {
+  margin-bottom: 8px;
+}
+
 .navbar-action .navbar-header,
 .navbar-action .navbar-collapse {
   margin: 0;
@@ -73,7 +77,7 @@
 
 @media (min-width: 768px) {
   .navbar-action p {
-    display: none; 
+    display: none;
   }
 
   .navbar-action .dropdown-menu {
