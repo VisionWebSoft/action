@@ -270,7 +270,7 @@ blockquote,
 .navbar-action .form-control,
 .navbar-action .form-group {
   display: inline-block;
-  max-width: 360px; /* Starts to look a bit ridiculous above this mark. */
+  max-width: 550px;
 }
 
 .navbar-action button[type=submit] {
@@ -294,6 +294,11 @@ blockquote,
   .navbar-action .open .dropdown-menu {
     margin-top: 0;
   }
+
+.navbar-nav-action {
+  margin-left: 0;
+}
+
   .navbar-action .navbar-nav-action > .open > a:hover,
   .navbar-action .navbar-nav-action > .open > a:focus,
   .navbar-action .navbar-nav-action > .active > a,
@@ -316,23 +321,16 @@ blockquote,
     border-bottom-right-radius: 4px;
   }
 
-  .navbar-form {
+  .navbar-form-action {
+    margin-top: 0;
+    margin-left: 15px;
     padding-left: 0;
   }
 
   .navbar-action button[type=submit] {
-    margin: 0.5em; /* Some 'breathing room!' */
-  }
-}
-
-@media (min-width: 992px) {
-  .navbar-form-action {
-    margin-top: 0;
-    margin-left: 15px;
-  }
-  .navbar-action button[type=submit] {
     margin-top: 0;
     margin-bottom: 8px;
+    margin-left: 0.5em; /* Some 'breathing room!' */
   }
 }
 
