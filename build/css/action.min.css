@@ -254,6 +254,10 @@ p .button-center {
   max-width: 980px;
 }
 
+button[type="reset"] {
+  margin-left: 0.5em;
+}
+
 .grid-container {
   padding-left: 10px;
   padding-right: 10px;

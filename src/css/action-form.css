@@ -20,3 +20,7 @@
 .form-action textarea {
   max-width: 980px;
 }
+
+button[type="reset"] {
+  margin-left: 0.5em;
+}
