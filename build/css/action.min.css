@@ -347,8 +347,6 @@ img {
 
 .nav a {
   background-color: rgb(0, 174, 239);
-  display: block;
-  padding: 10px 20px;
   text-align: center;
   text-decoration: none;
 }
@@ -359,15 +357,11 @@ img {
 
 .navbar-action .navbar-header,
 .navbar-action .navbar-collapse {
-  margin: 0;
+  margin: 0; /* Throws off the entire header if this is not there! This also needs to be in effect for the 'collapse.' */
 }
 
 .navbar-action .navbar-toggle {
   border: none;
-}
-
-.navbar-action .navbar-nav {
-  margin-top: 0;
 }
 
 .navbar-action .open .dropdown-menu {
@@ -377,14 +371,15 @@ img {
 }
 
 .navbar-action p {
-  margin-left: 15px;
+  margin-left: 15px; /* Approrpriately offsets the 'text link' in the header. */
   float: left !important; /* A la Bootstrap. */
 }
 
 .navbar-action li {
-  margin-bottom: -4px;
+  margin-bottom: -2px; /* Close annoying gaps vertically in .dropdown. */
 }
 
+/* 'Clean' hover transitions :) */
 .navbar-action li:hover {
   -webkit-transition: 0.2s;
   -moz-transition: 0.2s;
@@ -392,10 +387,6 @@ img {
   transition: 0.2s;
 }
 
-.navbar-nav-action {
-  margin-top: 0;
-  margin-bottom: 0;
-}
 
 .navbar-nav-action li {
   margin-right: -2px; /* Close annoying gaps! */
@@ -404,12 +395,6 @@ img {
 .navbar-form-action {
   margin-top: 4px; /* Seems to even out the positioning of elements - probably due to -4px margin on li. */
   margin-bottom: 0;
-}
-
-.navbar-action .form-control,
-.navbar-action .form-group {
-  display: inline-block;
-  max-width: 550px;
 }
 
 .navbar-action button[type=submit] {
@@ -435,27 +420,12 @@ img {
     width: 100%;
   }
 
-  /*.navbar-action .open .dropdown-menu {
-    margin-top: 0;
-  }
-
-  .navbar-nav-action {
-    margin-left: 0;
-  }*/
-
   .navbar-action .navbar-nav-action > .open > a:hover,
   .navbar-action .navbar-nav-action > .open > a:focus,
   .navbar-action .navbar-nav-action > .active > a,
   .navbar-action ul > li > a {
-    color: white;
+    color: white; /* Defaults to black text in 'dropdown' without this. */
   }
-
-/* We remove this to get 'full height' buttons in the 'navbar.' */
-  /*.navbar-action .navbar-nav-action > .active > a,
-  .navbar-action ul > li > a {
-    padding-top: 0.5em;
-    padding-bottom: 0.5em;
-  }*/
 
   .navbar-action ul > li:first-child > a,
   .navbar-nav-action ul > li:last-child > a {
@@ -465,13 +435,6 @@ img {
   .navbar-action ul > li:last-child > a {
     border-bottom-right-radius: 4px;
   }
-
-  .navbar-form-action {
-    margin-top: 0;
-    margin-left: 15px;
-    padding-left: 0;
-  }
-
   .navbar-action button[type=submit] {
     margin-top: 0;
     margin-bottom: 8px;
