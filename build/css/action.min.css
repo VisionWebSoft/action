@@ -396,7 +396,9 @@ img {
   margin-right: -2px; /* Close annoying gaps 'horizontally.' */
 }
 
-.navbar-form-action {
+.navbar-form-action { /* Get rid of weird BS stuff around form. */
+  border: none;
+  box-shadow: none;
   margin-top: 4px; /* Seems to even out the positioning of elements - probably due to -4px margin on li. */
   margin-bottom: 0;
 }
