@@ -233,6 +233,12 @@ p .button-center {
 
 /* Forms with Bootstrap 'base' styles. */
 
+form[role='search'] >.form-group > .form-control { /* Use single quotations. (https://google.github.io/styleguide/htmlcssguide.xml#CSS_Quotation_Marks) */
+
+  display: inline-block; /* Centers 'Product Search' */
+  max-width: 320px;
+}
+
 .form-action {
   text-align: left;
 }
@@ -254,7 +260,7 @@ p .button-center {
   max-width: 980px;
 }
 
-button[type="reset"] {
+button[type='reset'] {
   margin-left: 0.5em;
 }
 
