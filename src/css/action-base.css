@@ -194,17 +194,3 @@ p .button-center {
   text-align: center;
   text-indent: -20000px;
 }
-
-@media (min-width: 768px) {
-  .grid-container div {
-    display: inline-block;
-  }
-
-  .grid-container div:first-child {
-    margin-left: -15px;
-  }
-
-  .grid-container div:last-child {
-    margin-left: 8px;
-  }
-}
