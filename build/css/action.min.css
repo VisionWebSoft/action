@@ -430,11 +430,11 @@ img {
     display: none;
   }
 
-  /* Keeps the .dropdown-menu from having ugly edges showing white! */
-  .navbar-action .dropdown-menu {
+ .navbar-action .open .dropdown-menu {
+    margin: 0;
     padding: 0;
     width: 100%;
-  }
+ }
 
   .navbar-action .navbar-nav-action > .open > a:hover,
   .navbar-action .navbar-nav-action > .open > a:focus,
@@ -446,6 +446,10 @@ img {
 
   .navbar-nav-action {
     margin-left: -0.5em;
+  }
+
+  .navbar-nav-action li {
+    margin-right: 0;
   }
 
   .navbar-nav-action .dropdown-menu > li:last-child > a:last-child {
