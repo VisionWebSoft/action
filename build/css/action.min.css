@@ -161,6 +161,7 @@ blockquote,
 .btn-group-action > button {
   margin-left: -4px;
   margin-right: -4px;
+
 }
 
 .btn-group-action > button:first-child {
@@ -507,14 +508,20 @@ img {
 
 @media (min-width: 412px) { /* Google Nexus 6 */
   #testimonials {
-    height: 350px;
+    height: 380px;
   }
 }
 
-@media (min-width: 598px) { /* Google Nexus 4 Land */
+@media (min-width: 568px) {
   #testimonials {
-    height: 250px;
+    height: 280px;
   }
+}
+
+@media (min-width: 667px) { /* iPhone 6 Land */
+    #testimonials {
+      height: 233px;
+    }
 }
 
 .no-wrap {
