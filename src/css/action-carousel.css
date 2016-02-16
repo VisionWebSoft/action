@@ -26,3 +26,9 @@
   right: inherit;
   bottom: inherit;
 }
+
+@media (min-width: 768px) {
+  .carousel-action {
+    margin: inherit; /* Reset this margin once it enters 'the grid.' */
+  }
+}

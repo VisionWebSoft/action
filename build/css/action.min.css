@@ -57,7 +57,6 @@ main {
   background-color: #000;
   margin: 0 auto;
   padding: 0.5em;
-  padding-bottom: 1em;
   width: 98%;
   width: calc(100% - 3em);
   height: 100%;
@@ -223,6 +222,12 @@ p .button-center {
   top: 0; /* Align precisely to top. */
   right: inherit;
   bottom: inherit;
+}
+
+@media (min-width: 768px) {
+  .carousel-action {
+    margin: inherit; /* Reset this margin once it enters 'the grid.' */
+  }
 }
 
 /* Forms with Bootstrap 'base' styles. */
@@ -499,7 +504,13 @@ img {
   }
 }
 
-@media (min-width: 568px) {
+@media (min-width: 480px) { /* Google Nexus 6 */
+  #testimonials {
+    height: 325px;
+  }
+}
+
+@media (min-width: 533px) { /* Nokia Lumia 520 Land */
   #testimonials {
     height: 275px;
   }
@@ -518,9 +529,9 @@ img {
 }
 
 @media (min-width: 768px) {
-    #testimonials {
-      height: initial; /* We can reset the height as the .grid floats will kick in, making the height fine. */
-    }
+  #testimonials {
+    height: 400px;
+  }
 }
 
 .no-wrap {
