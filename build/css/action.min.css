@@ -394,8 +394,7 @@ img {
 }
 
 .navbar-nav-action { /* Prevent top and bottom gaps in 'dropdown.' */
-  margin-top: 0;
-  margin-bottom: 0;
+  margin: 0;
 }
 
 .navbar-nav-action li {
@@ -439,14 +438,12 @@ img {
     color: white; /* Defaults to black text in 'dropdown' without this. */
   }
 
-  .navbar-action ul > li:first-child > a,
-  .navbar-nav-action ul > li:last-child > a {
+  .navbar-nav-action .dropdown-menu > li:last-child > a:last-child {
     border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+
   }
 
-  .navbar-action ul > li:last-child > a {
-    border-bottom-right-radius: 4px;
-  }
   .navbar-action button[type=submit] {
     margin-top: 0;
     margin-bottom: 8px;
