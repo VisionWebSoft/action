@@ -42,9 +42,13 @@
   transition: 0.2s;
 }
 
+.navbar-nav-action { /* Prevent top and bottom gaps in 'dropdown.' */
+  margin-top: 0;
+  margin-bottom: 0;
+}
 
 .navbar-nav-action li {
-  margin-right: -2px; /* Close annoying gaps! */
+  margin-right: -2px; /* Close annoying gaps 'horizontally.' */
 }
 
 .navbar-form-action {
