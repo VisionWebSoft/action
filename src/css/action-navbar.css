@@ -89,6 +89,7 @@
   .navbar-action .navbar-nav-action > .active > a,
   .navbar-action ul > li > a {
     color: white; /* Defaults to black text in 'dropdown' without this. */
+    height: 53px; /* Designer's Note: 'Hack' setting of height to avoid weird gap underneath this! */
   }
 
   .navbar-nav-action {
