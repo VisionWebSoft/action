@@ -37,6 +37,7 @@ a:hover {
 button {
   background-color: rgb(255, 242, 0);
   border: none;
+  border-radius: 4px;
   color: black;
   padding: 8px;
 }
