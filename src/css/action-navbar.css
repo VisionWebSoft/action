@@ -52,8 +52,8 @@
   margin-bottom: 0;
 }
 
-.navbar-nav-action .dropdown {
-  margin-right: -2px; /* Close annoying gap to right of .dropdown.  */
+.navbar-nav-action li {
+  margin-right: -2px; /* Close annoying gaps! */
 }
 
 .navbar-form-action {
