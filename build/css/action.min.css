@@ -137,11 +137,11 @@ blockquote,
   text-align: left;
 }
 
-.collapse,
+/*.collapse,
 .collapsing {
   background: rgb(0, 0, 0);
   background: rgba(0, 0, 0, 0.5);
-}
+}*/
 
 .collapse,
 .collapsing {
@@ -364,7 +364,7 @@ img {
 
 .navbar-action .navbar-header,
 .navbar-action .navbar-collapse {
-  margin: 0; /* Throws off the entire header if this is not there! This also needs to be in effect for the 'collapse.' */
+  margin: 0 -0.5em; /* Throws off the entire header if this is not there! This also needs to be in effect for the 'collapse.' /* Prevent top and bottom gaps in 'dropdown.' However, we must keep the side margins in to avoid ugliness on mobile 'dropdown.' */
 }
 
 .navbar-action .navbar-toggle {

@@ -137,11 +137,11 @@ blockquote,
   text-align: left;
 }
 
-.collapse,
+/*.collapse,
 .collapsing {
   background: rgb(0, 0, 0);
   background: rgba(0, 0, 0, 0.5);
-}
+}*/
 
 .collapse,
 .collapsing {
