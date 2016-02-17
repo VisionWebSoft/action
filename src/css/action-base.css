@@ -15,6 +15,7 @@ body {
   font-family: "myriad-pro", sans-serif;
   font-size: 1.8em;
   height: 100%;
+  /*line-height: 0;*/
 }
 
 a,
@@ -136,11 +137,11 @@ blockquote,
   text-align: left;
 }
 
-.collapse,
+/*.collapse,
 .collapsing {
   background: rgb(0, 0, 0);
   background: rgba(0, 0, 0, 0.5);
-}
+}*/
 
 .collapse,
 .collapsing {

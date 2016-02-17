@@ -15,6 +15,7 @@ body {
   font-family: "myriad-pro", sans-serif;
   font-size: 1.8em;
   height: 100%;
+  /*line-height: 0;*/
 }
 
 a,
@@ -136,11 +137,11 @@ blockquote,
   text-align: left;
 }
 
-.collapse,
+/*.collapse,
 .collapsing {
   background: rgb(0, 0, 0);
   background: rgba(0, 0, 0, 0.5);
-}
+}*/
 
 .collapse,
 .collapsing {
@@ -233,6 +234,12 @@ p .button-center {
 
 /* Forms with Bootstrap 'base' styles. */
 
+form[role='search'] >.form-group > .form-control { /* Use single quotations. (https://google.github.io/styleguide/htmlcssguide.xml#CSS_Quotation_Marks) */
+
+  display: inline-block; /* Centers 'Product Search' */
+  max-width: 320px;
+}
+
 .form-action {
   text-align: left;
 }
@@ -254,7 +261,7 @@ p .button-center {
   max-width: 980px;
 }
 
-button[type="reset"] {
+button[type='reset'] {
   margin-left: 0.5em;
 }
 
@@ -357,7 +364,8 @@ img {
 
 .navbar-action .navbar-header,
 .navbar-action .navbar-collapse {
-  margin: 0; /* Throws off the entire header if this is not there! This also needs to be in effect for the 'collapse.' */
+  margin: 0 -0.5em;
+  /* Throws off the entire header if this is not there! This also needs to be in effect for the 'collapse.' /* Prevent top and bottom gaps in 'dropdown.' However, we must keep the side margins in to avoid ugliness on mobile 'dropdown.' */
 }
 
 .navbar-action .navbar-toggle {
@@ -371,15 +379,20 @@ img {
 }
 
 .navbar-action p {
-  margin-left: 15px; /* Approrpriately offsets the 'text link' in the header. */
-  float: left !important; /* A la Bootstrap. */
+  margin-left: 15px;
+  /* Approrpriately offsets the 'text link' in the header. */
+  float: left !important;
+  /* A la Bootstrap. */
 }
 
 .navbar-action li {
-  margin-bottom: -2px; /* Close annoying gaps vertically in .dropdown. */
+  margin-bottom: -2px;
+  /* Close annoying gaps vertically in .dropdown. */
 }
 
+
 /* 'Clean' hover transitions :) */
+
 .navbar-action li:hover {
   -webkit-transition: 0.2s;
   -moz-transition: 0.2s;
@@ -387,57 +400,78 @@ img {
   transition: 0.2s;
 }
 
+.navbar-nav-action {
+  margin: 0 -0.5em;
+  /* Prevent top and bottom gaps in 'dropdown.' However, we must keep the side margins in to avoid ugliness on mobile 'dropdown.' */
+}
+
 .navbar-nav-action li {
-  margin-right: -2px; /* Close annoying gaps 'horizontally.' */
+  margin-right: -2px;
+  /* Close annoying gaps 'horizontally.' */
 }
 
 .navbar-form-action {
-  margin-top: 4px; /* Seems to even out the positioning of elements - probably due to -4px margin on li. */
+  /* Get rid of weird BS stuff around form. */
+  border: none;
+  box-shadow: none;
+  margin-top: 4px;
+  /* Seems to even out the positioning of elements - probably due to -4px margin on li. */
   margin-bottom: 0;
 }
 
 .navbar-action button[type=submit] {
   background-color: rgb(255, 242, 0);
   color: black;
-
   position: relative;
-  top: 2px; /* Just a nitpicky setting because 'Submit' didn't seem to align quite right without this, for some reason. */
+  top: 2px;
+  /* Just a nitpicky setting because 'Submit' didn't seem to align quite right without this, for some reason. */
 }
+
 
 /***
   *** Media Queries ***
 ***/
 
 @media (min-width: 768px) {
+  .navbar-action {
+    border-radius: 0;
+  }
   .navbar-action p {
     display: none;
   }
-
-  /* Keeps the .dropdown-menu from having ugly edges showing white! */
-  .navbar-action .dropdown-menu {
+  .navbar-action .open .dropdown-menu {
+    margin: 0;
     padding: 0;
     width: 100%;
   }
-
   .navbar-action .navbar-nav-action > .open > a:hover,
   .navbar-action .navbar-nav-action > .open > a:focus,
   .navbar-action .navbar-nav-action > .active > a,
   .navbar-action ul > li > a {
-    color: white; /* Defaults to black text in 'dropdown' without this. */
+    color: white;
+    /* Defaults to black text in 'dropdown' without this. */
   }
+.navbar-nav-action >  li > a {
+  height: 53px;
+}
 
-  .navbar-action ul > li:first-child > a,
-  .navbar-nav-action ul > li:last-child > a {
+  /*.navbar-action ul > li > a*/
+  /*height: 53px; /* Designer's Note: 'Hack' setting of height to avoid weird gap underneath this! */
+  .navbar-nav-action {
+    margin-left: -0.5em;
+  }
+  .navbar-nav-action li {
+    margin-right: 0;
+  }
+  .navbar-nav-action .dropdown-menu > li:last-child > a:last-child {
     border-bottom-left-radius: 4px;
-  }
-
-  .navbar-action ul > li:last-child > a {
     border-bottom-right-radius: 4px;
   }
   .navbar-action button[type=submit] {
     margin-top: 0;
     margin-bottom: 8px;
-    margin-left: 0.5em; /* Some 'breathing room!' */
+    margin-left: 0.5em;
+    /* Some 'breathing room!' */
   }
 }
 
