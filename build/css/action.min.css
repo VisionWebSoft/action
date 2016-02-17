@@ -11,12 +11,15 @@ body {
   color: #fff;
   background-color: #edeff0;
   background: url(../images/carbon-fiber-bg1.png);
+  background-size: cover;
   font-family: "myriad-pro", sans-serif;
   font-size: 1.8em;
+  height: 100%;
 }
 
 a,
-button {
+button,
+.button {
   transition: 0.5s;
 }
 
@@ -32,27 +35,32 @@ a:hover {
 }
 
 button {
-  border-radius: 4px;
-}
-
-button {
   background-color: rgb(255, 242, 0);
   border: none;
+  border-radius: 4px;
   color: black;
   padding: 8px;
 }
 
 button:focus,
-button:hover {
+button:hover,
+.button:focus,
+.button:hover {
   background-color: rgb(96, 225, 100);
+}
+
+address span {
+  display: inline-block;
+  margin: 0 4px;
 }
 
 main {
   background-color: #000;
   margin: 0 auto;
-  padding: 1em;
+  padding: 0.5em;
   width: 98%;
   width: calc(100% - 3em);
+  height: 100%;
 }
 
 h1,
@@ -71,12 +79,24 @@ p {
   margin: 0.5em 0;
 }
 
+p button { /* This will be buttons in the middle of paragraphs, as opposed to 'form' and 'nav' buttons. */
+  display: block;
+  margin: 0 auto;
+  max-width: 180px;
+  width: 70%;
+}
+
+p button:focus,
+p button:hover {
+  border: rgb(255, 242, 0);
+}
+
 blockquote {
   border: none;
   /* Override Bootstrap */
   display: inline-block;
-  margin: 4px;
-  padding: 8px;
+  margin: 0;
+  padding: 0;
 }
 
 blockquote p {
@@ -109,29 +129,6 @@ blockquote,
   padding: 0.5em 0;
 }
 
-.btn-group-action {
-  font-size: 16px;
-  /* Designer's Note: Override font-size to fit on 320px. */
-  margin-bottom: 20px;
-}
-
-.btn-group-action > button {
-  border: solid thin #004989;
-  border-radius: 0;
-  margin-left: -4px;
-  margin-right: -4px;
-}
-
-.btn-group-action > button:first-child {
-  border-top-left-radius: 4px;
-  border-bottom-left-radius: 4px;
-}
-
-.btn-group-action > button:last-child {
-  border-top-right-radius: 4px;
-  border-bottom-right-radius: 4px;
-}
-
 .collapse > p,
 .collapse > ul,
 .collapsing > p,
@@ -150,6 +147,44 @@ blockquote,
   padding: 0 .5em;
 }
 
+.btn-group-action {
+  font-size: 16px;
+  /* Designer's Note: Override font-size to fit on 320px. */
+  margin-bottom: 8px;
+}
+
+.btn-group-action > button,
+.btn-group-action > .button {
+  border: solid thin #004989;
+  border-radius: 0;
+}
+
+.btn-group-action > button {
+  margin-left: -4px;
+  margin-right: -4px;
+
+}
+
+.btn-group-action > button:first-child {
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+.btn-group-action > .button:last-child {
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.button {
+  background-color: rgb(236, 0, 140);
+  color: white;
+  padding: 9px; /* Designers' Note: This doesn't keep the same height as its siblings, so we use this 'hack'...strange! */
+}
+
+p .button-center {
+  border: solid white 2px; /* Buttons that are 'by themselves.' */
+}
+
 .main-logo {
   background: url(../images/logo.png) no-repeat center / contain;
   direction: ltr;
@@ -161,33 +196,49 @@ blockquote,
   text-indent: -20000px;
 }
 
-@media (min-width: 768px) {
-  /* Main Layout Styles
-  ================================ */
-  .nav li {
-    margin: 4px 4px 4px 0;
-    display: inline-block;
-  }
-}
-
-
-/*@media (min-width: 1px) and (max-width: 767px) {
-  .nav li {
-    margin-top: 12px;
-  }
-}*/
-
 /* Custom overrides on Bootstrap .carousel. */
 .carousel-action {
-  /*background: #000;*/
-  margin: 0 calc(-1em - 10px); /* Makes .carousel go to 'edges' of <main>. */
+  margin: 0 calc(-0.5em - 10px); /* Makes .carousel go to 'edges' of <main>. This needs to be adjusted to coincide with main's padding. */
+}
+
+.carousel-indicators-action,
+.carousel-caption-action {
+  background: black;
+  background: rgba(0, 0, 0, 0.4);
+  width: 100%;
+
+  /* The inherit CSS-value causes the element for which it is specified to take the computed value of the property from its parent element. (https://developer.mozilla.org/en-US/docs/Web/CSS/inherit) */
+  left: inherit;
+}
+
+.carousel-indicators-action {
+  margin: 0 auto;
+
+  bottom: 0; /* Override BS. */
+}
+
+.carousel-caption-action {
+  padding: 4px;
+
+  top: 0; /* Align precisely to top. */
+  right: inherit;
+  bottom: inherit;
+}
+
+@media (min-width: 768px) {
+  .carousel-action {
+    margin: inherit; /* Reset this margin once it enters 'the grid.' */
+  }
 }
 
 /* Forms with Bootstrap 'base' styles. */
 
 .form-action {
-  padding: 15px;
   text-align: left;
+}
+
+.form-action label {
+  display: block; /* Keeps labels consistently above input fields. */
 }
 
 .form-action input,
@@ -195,69 +246,154 @@ blockquote,
   width: 100%;
 }
 
+.form-action input {
+  max-width: 480px;
+}
+
+.form-action textarea {
+  max-width: 980px;
+}
+
+button[type="reset"] {
+  margin-left: 0.5em;
+}
+
+.grid-container {
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: auto;
+  margin-right: auto
+}
+
+img {
+  width: 100%
+}
+
+@media (min-width:1px) and (max-width:767px) {
+  .grid-container>[class^=grid-] {
+    padding-top: 5px;
+    padding-bottom: 5px
+  }
+  .hide-mobile {
+    display: none
+  }
+}
+
+@media (min-width:768px) {
+  .grid-container>[class^=grid-] {
+    float: left;
+    min-height: 1px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: 2%
+  }
+  .grid-container>[class^=grid-]:first-child {
+    margin-left: 0
+  }
+  .grid-container>[class^=grid-]:last-child {
+    float: right
+  }
+  .grid-1 {
+    width: 6.5%
+  }
+  .grid-2 {
+    width: 15%
+  }
+  .grid-3 {
+    width: 23.5%
+  }
+  .grid-4 {
+    width: 32%
+  }
+  .grid-5 {
+    width: 40.5%
+  }
+  .grid-6 {
+    width: 49%
+  }
+  .grid-7 {
+    width: 57.5%
+  }
+  .grid-8 {
+    width: 66%
+  }
+  .grid-9 {
+    width: 74.5%
+  }
+  .grid-10 {
+    width: 83%
+  }
+  .grid-11 {
+    width: 91.5%
+  }
+  .grid-12 {
+    width: 100%
+  }
+  .grid-container:after,
+  .group:after {
+    content: " ";
+    display: table;
+    clear: both
+  }
+}
+
+@media (min-width:1200px) {
+  .grid-container {
+    max-width: 1100px
+  }
+}
+
 /* Bootstrap NavBar */
 
 .nav a {
-  /*border-radius: 5px; - Designer's Note: Probably will use this on wide screen. */
-  color: white;
   background-color: rgb(0, 174, 239);
-  display: block;
-  padding: 10px 20px;
   text-align: center;
   text-decoration: none;
 }
 
-
-/*.nav a:focus,
-.nav a:hover,
-.navbar-action button[type=submit]:hover {
-  background-color: rgb(96, 225, 100);
-}*/
+.navbar-action {
+  margin-bottom: 8px;
+}
 
 .navbar-action .navbar-header,
 .navbar-action .navbar-collapse {
-  margin: 0;
+  margin: 0; /* Throws off the entire header if this is not there! This also needs to be in effect for the 'collapse.' */
 }
 
 .navbar-action .navbar-toggle {
   border: none;
 }
 
-.navbar-action .navbar-nav {
-  margin-top: 0;
+.navbar-action .open .dropdown-menu {
+  /* Prevents unsightly gaps above and below .dropdown-menu. */
+  margin-top: -6px;
+  margin-bottom: -6px;
 }
 
-.navbar-action .open .dropdown-menu {
-  margin-top: -5px;
-  margin-bottom: -5px;
+.navbar-action p {
+  margin-left: 15px; /* Approrpriately offsets the 'text link' in the header. */
+  float: left !important; /* A la Bootstrap. */
 }
 
 .navbar-action li {
-  margin-bottom: -4px;
+  margin-bottom: -2px; /* Close annoying gaps vertically in .dropdown. */
 }
 
+/* 'Clean' hover transitions :) */
 .navbar-action li:hover {
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -o-transition: 0.2s;
   transition: 0.2s;
 }
 
-.navbar-nav-action {
-  margin-top: 0;
-  margin-bottom: 0;
+.navbar-nav-action li {
+  margin-right: -2px; /* Close annoying gaps 'horizontally.' */
 }
 
 .navbar-form-action {
   margin-top: 4px; /* Seems to even out the positioning of elements - probably due to -4px margin on li. */
   margin-bottom: 0;
-}
-
-.navbar-action .form-control,
-.navbar-action .form-group {
-  display: inline-block;
-
-  /* Designer's Note: Keep an eye out for horizontal scrollbars! However, enacting this rule seems to disrupt the flow of the form fields and 'Submit'. This rule WILL disrupt the positioning of form elements in .navbar! */
-  /*overflow-x: hidden;*/
-
-  width: calc(100% - 80px);
 }
 
 .navbar-action button[type=submit] {
@@ -266,9 +402,122 @@ blockquote,
 
   position: relative;
   top: 2px; /* Just a nitpicky setting because 'Submit' didn't seem to align quite right without this, for some reason. */
-  right: 30px; /* should move this next to form element, based on width: calcl() above. */
 }
 
-.no-wrap { 
-	white-space: nowrap;	
+/***
+  *** Media Queries ***
+***/
+
+@media (min-width: 768px) {
+  .navbar-action p {
+    display: none;
+  }
+
+  /* Keeps the .dropdown-menu from having ugly edges showing white! */
+  .navbar-action .dropdown-menu {
+    padding: 0;
+    width: 100%;
+  }
+
+  .navbar-action .navbar-nav-action > .open > a:hover,
+  .navbar-action .navbar-nav-action > .open > a:focus,
+  .navbar-action .navbar-nav-action > .active > a,
+  .navbar-action ul > li > a {
+    color: white; /* Defaults to black text in 'dropdown' without this. */
+  }
+
+  .navbar-action ul > li:first-child > a,
+  .navbar-nav-action ul > li:last-child > a {
+    border-bottom-left-radius: 4px;
+  }
+
+  .navbar-action ul > li:last-child > a {
+    border-bottom-right-radius: 4px;
+  }
+  .navbar-action button[type=submit] {
+    margin-top: 0;
+    margin-bottom: 8px;
+    margin-left: 0.5em; /* Some 'breathing room!' */
+  }
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+#testimonials {
+  height: 525px; /* Designer's Note: Must use height of tallest element. Try to keep all sections approximately the same height. */
+  position: relative;
+}
+
+.testimonial {
+  opacity: 0;
+  position: absolute;
+}
+
+/* Designer's Note: The timing of .testimonial will depend on the number of testimonials and will have to be adjusted manually based on the number of entries (until JS is introduced.) */
+.testimonial:first-of-type {
+  -webkit-animation: fade 2s ease-out 0.2s forwards, fade 10s ease-out 10.2s reverse forwards;
+  -moz-animation: fade 2s ease-out 0.2s forwards, fade 10s ease-out 10.2s reverse forwards;
+  animation: fade 2s ease-out 0.2s forwards, fade 10s ease-out 10.2s reverse forwards;
+}
+
+@media (min-width: 375px) { /* iPhone 6 */
+  #testimonials {
+    height: 425px;
+  }
+}
+
+@media (min-width: 412px) { /* Google Nexus 6 */
+  #testimonials {
+    height: 375px;
+  }
+}
+
+@media (min-width: 480px) { /* Google Nexus 6 */
+  #testimonials {
+    height: 325px;
+  }
+}
+
+@media (min-width: 533px) { /* Nokia Lumia 520 Land */
+  #testimonials {
+    height: 275px;
+  }
+}
+
+@media (min-width: 598px) {
+  #testimonials {
+    height: 250px;
+  }
+}
+
+@media (min-width: 667px) { /* iPhone 6 Land */
+    #testimonials {
+      height: 225px;
+    }
+}
+
+@media (min-width: 768px) {
+  #testimonials {
+    height: 400px;
+  }
+}
+
+.no-wrap {
+	white-space: nowrap;
 }

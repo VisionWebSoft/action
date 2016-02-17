@@ -63,6 +63,8 @@ module.exports = function( grunt ) { // just a node thing
                 "box-model": false,
                 "box-sizing": false,
                 "ids": false,
+                "unqualified-attributes": false,
+                "regex-selectors": false,
                 "unique-headings": false,
                 "universal-selector": false
             },

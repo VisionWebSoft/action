@@ -11,12 +11,15 @@ body {
   color: #fff;
   background-color: #edeff0;
   background: url(../images/carbon-fiber-bg1.png);
+  background-size: cover;
   font-family: "myriad-pro", sans-serif;
   font-size: 1.8em;
+  height: 100%;
 }
 
 a,
-button {
+button,
+.button {
   transition: 0.5s;
 }
 
@@ -32,27 +35,32 @@ a:hover {
 }
 
 button {
-  border-radius: 4px;
-}
-
-button {
   background-color: rgb(255, 242, 0);
   border: none;
+  border-radius: 4px;
   color: black;
   padding: 8px;
 }
 
 button:focus,
-button:hover {
+button:hover,
+.button:focus,
+.button:hover {
   background-color: rgb(96, 225, 100);
+}
+
+address span {
+  display: inline-block;
+  margin: 0 4px;
 }
 
 main {
   background-color: #000;
   margin: 0 auto;
-  padding: 1em;
+  padding: 0.5em;
   width: 98%;
   width: calc(100% - 3em);
+  height: 100%;
 }
 
 h1,
@@ -71,12 +79,24 @@ p {
   margin: 0.5em 0;
 }
 
+p button { /* This will be buttons in the middle of paragraphs, as opposed to 'form' and 'nav' buttons. */
+  display: block;
+  margin: 0 auto;
+  max-width: 180px;
+  width: 70%;
+}
+
+p button:focus,
+p button:hover {
+  border: rgb(255, 242, 0);
+}
+
 blockquote {
   border: none;
   /* Override Bootstrap */
   display: inline-block;
-  margin: 4px;
-  padding: 8px;
+  margin: 0;
+  padding: 0;
 }
 
 blockquote p {
@@ -109,29 +129,6 @@ blockquote,
   padding: 0.5em 0;
 }
 
-.btn-group-action {
-  font-size: 16px;
-  /* Designer's Note: Override font-size to fit on 320px. */
-  margin-bottom: 20px;
-}
-
-.btn-group-action > button {
-  border: solid thin #004989;
-  border-radius: 0;
-  margin-left: -4px;
-  margin-right: -4px;
-}
-
-.btn-group-action > button:first-child {
-  border-top-left-radius: 4px;
-  border-bottom-left-radius: 4px;
-}
-
-.btn-group-action > button:last-child {
-  border-top-right-radius: 4px;
-  border-bottom-right-radius: 4px;
-}
-
 .collapse > p,
 .collapse > ul,
 .collapsing > p,
@@ -150,6 +147,44 @@ blockquote,
   padding: 0 .5em;
 }
 
+.btn-group-action {
+  font-size: 16px;
+  /* Designer's Note: Override font-size to fit on 320px. */
+  margin-bottom: 8px;
+}
+
+.btn-group-action > button,
+.btn-group-action > .button {
+  border: solid thin #004989;
+  border-radius: 0;
+}
+
+.btn-group-action > button {
+  margin-left: -4px;
+  margin-right: -4px;
+
+}
+
+.btn-group-action > button:first-child {
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+.btn-group-action > .button:last-child {
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.button {
+  background-color: rgb(236, 0, 140);
+  color: white;
+  padding: 9px; /* Designers' Note: This doesn't keep the same height as its siblings, so we use this 'hack'...strange! */
+}
+
+p .button-center {
+  border: solid white 2px; /* Buttons that are 'by themselves.' */
+}
+
 .main-logo {
   background: url(../images/logo.png) no-repeat center / contain;
   direction: ltr;
@@ -160,19 +195,3 @@ blockquote,
   text-align: center;
   text-indent: -20000px;
 }
-
-@media (min-width: 768px) {
-  /* Main Layout Styles
-  ================================ */
-  .nav li {
-    margin: 4px 4px 4px 0;
-    display: inline-block;
-  }
-}
-
-
-/*@media (min-width: 1px) and (max-width: 767px) {
-  .nav li {
-    margin-top: 12px;
-  }
-}*/

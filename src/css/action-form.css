@@ -1,11 +1,26 @@
 /* Forms with Bootstrap 'base' styles. */
 
 .form-action {
-  padding: 15px;
   text-align: left;
+}
+
+.form-action label {
+  display: block; /* Keeps labels consistently above input fields. */
 }
 
 .form-action input,
 .form-action textarea {
   width: 100%;
+}
+
+.form-action input {
+  max-width: 480px;
+}
+
+.form-action textarea {
+  max-width: 980px;
+}
+
+button[type="reset"] {
+  margin-left: 0.5em;
 }

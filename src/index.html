@@ -8,7 +8,6 @@
   <title>Action Graphics - "Our Actions Create Great Reactions"</title>
   <meta name="viewport" content="width=device-width">
 
-  <link rel="stylesheet" href="css/vendor/grid.min.css">
   <link rel="stylesheet" href="css/vendor/bootstrap.min.css">
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
@@ -24,7 +23,6 @@
     });
   } catch (e) {}
   </script>
-
 </head>
 
 <body>
@@ -40,13 +38,17 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Action Graphics - Client Login</a>
+
+          <!-- Float left and show on mobile only. -->
+          <p class="navbar-text navbar-left"><a href="#" class="navbar-link">Action Client Register/Sign-In</a></p>
         </div>
+        <!-- /.navbar-header -->
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="navbar-collapse-action">
           <ul class="nav navbar-nav navbar-nav-action">
-            <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
+            <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
               aria-expanded="false">Products &amp; Services
@@ -58,6 +60,7 @@
                 <li><a href="#">Engraving</a></li>
                 <li><a href="#">Print</a></li>
                 <li><a href="#">Promotional Products</a></li>
+                <li><a href="#">Signage</a></li>
                 <li><a href="#">Trade Show Displays</a></li>
                 <li><a href="#">Vehicle Graphics</a></li>
               </ul>
@@ -66,7 +69,7 @@
             <li><a href="#">FAQ</a></li>
           </ul>
 
-          <form class="navbar-form navbar-form-action navbar-left" role="search">
+          <form class="navbar-form navbar-form-action" role="search">
             <div class="form-group">
               <input type="text" class="form-control" placeholder="Product Search">
             </div>
@@ -79,104 +82,116 @@
       <!-- /.container -->
     </nav>
 
-    <div class="btn-group btn-group-action" role="group" aria-label="quick-links">
-      <button type="button" data-toggle="collapse" data-target="#contact-frm-container"
-      aria-expanded="false" aria-controls="contact-frm-container">
-        Contact Us
-        <span class="fa fa-angle-down"></span>
-      </button>
-      <button type="button" data-toggle="collapse" data-target="#price-check-container"
-      aria-expanded="false" aria-controls="price-check-container">Price Check
-        <span class="fa fa-angle-down"></span>
-      </button>
-      <button type="button" data-toggle="collapse" data-target="#consultations-container"
-      aria-expanded="false" aria-controls="consultations-container">Consultations
-        <span class="fa fa-angle-down"></span>
-      </button>
-    </div>
-    <!-- /.btn-group -->
-
-    <div class="collapse" id="contact-frm-container">
+    <div class="collapse grid-container" id="contact-frm-container">
       <form class="form-action" action="#">
         <fieldset>
           <legend>Your Info</legend>
-          <div class="form-group">
-            <label for="fname">First Name:
-              <strong>
+          <div class="grid-container">
+            <div class="grid-6">
+              <div class="form-group">
+                <label for="fname">First Name:
+                  <strong>
                   <abbr title="required">*</abbr>
                 </strong>
-            </label>
-            <input id="fname" type="text" name="fname" required />
-          </div>
-          <!-- /.form-group -->
+                </label>
+                <input id="fname" type="text" name="fname" required />
+              </div>
+              <!-- /.form-group -->
 
-          <div class="form-group">
-            <label for="lname">Last Name:
-              <strong>
+            </div>
+            <!-- /.grid-6 -->
+            <div class="grid-6">
+              <div class="form-group">
+                <label for="lname">Last Name:
+                  <strong>
                   <abbr title="required">*</abbr>
                 </strong>
-            </label>
-            <input id="lname" type="text" name="lname" required />
-
+                </label>
+                <input id="lname" type="text" name="lname" required />
+              </div>
+              <!-- /.form-group -->
+            </div>
+            <!-- /.grid-6 -->
           </div>
-          <!-- /.form-group -->
+          <!-- /.grid-container -->
 
-          <div class="form-group">
-            <label for="cname">Company/Organization Name:
-              <strong>
+          <div class="grid-container">
+            <div class="grid-5">
+              <div class="form-group">
+                <label for="cname">Company/Organization Name:
+                  <strong>
                   <abbr title="required">*</abbr>
                 </strong>
-            </label>
-            <input id="cname" type="text" name="cname" required />
+                </label>
+                <input id="cname" type="text" name="cname" required />
+              </div>
+              <!-- /.form-group -->
+            </div>
+            <!-- /.grid-5 -->
 
-          </div>
-          <!-- /.form-group -->
-
-          <div class="form-group">
-            <label for="position">Position:
-              <strong>
+            <div class="grid-7">
+              <div class="form-group">
+                <label for="position">Position:
+                  <strong>
                   <abbr title="required">*</abbr>
                 </strong>
-            </label>
-            <input id="position" type="text" name="position" required placeholder="Please enter your job title or occupation/role with your Company/Organization"
-            />
-
+                </label>
+                <input id="position" type="text" name="position" required placeholder="Enter your role within your Company/Organization."
+                />
+              </div>
+              <!-- /.form-group -->
+            </div>
+            <!-- /.grid-7 -->
           </div>
-          <!-- /.form-group -->
+          <!-- /.grid-container -->
 
-          <div class="form-group">
-            <label for="email">Email:
-              <strong>
+          <div class="grid-container">
+            <div class="grid-6">
+              <div class="form-group">
+                <label for="email">Email:
+                  <strong>
                   <abbr title="required">*</abbr>
                 </strong>
-            </label>
-            <input id="email" type="email" name="email" required />
+                </label>
+                <input id="email" type="email" name="email" required />
+              </div>
+              <!-- /.form-group -->
+            </div>
+            <!-- /.grid-6 -->
 
+            <div class="grid-6">
+              <div class="form-group">
+                <label for="fone">Contact Phone #:</label>
+                <input id="fone" type="tel" name="fone" />
+              </div>
+              <!-- /.form-group -->
+            </div>
+            <!-- /.grid-6 -->
           </div>
-          <!-- /.form-group -->
+          <!-- /.grid-container -->
 
-          <div class="form-group">
-            <label for="fone">Contact Phone #:</label>
-            <input id="fone" type="tel" name="fone" />
-          </div>
-          <!-- /.form-group -->
-
-          <div class="form-group">
-            <label for="msg">How might we help you?
-              <strong>
+          <div class="grid-container">
+            <div class="grid-12">
+              <div class="form-group">
+                <label for="msg">How might we help you?
+                  <strong>
                   <abbr title="required">*</abbr>
                 </strong>
-            </label>
-            <textarea id="msg" name="msg" required>Please be as descriptive as possible.</textarea>
-
+                </label>
+                <textarea id="msg" name="msg" required>Please be as descriptive as possible.</textarea>
+              </div>
+              <!-- /.form-group -->
+            </div>
+            <!-- /.grid-12 -->
           </div>
-          <!-- /.form-group -->
-
+          <!-- /.grid-container -->
         </fieldset>
 
         <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
       </form>
     </div>
+    <!-- /.collapse -->
 
     <div class="collapse" id="price-check-container">
       <p>Sorry, but to use this online feature, you will need a <a href="#">current client account.</a>        Client account benefits include:
@@ -192,12 +207,13 @@
           <small>(restrictions apply)</small>
         </li>
       </ul>
-      <p><a href="#">Sign up now,</a> or
-        <a href="#">sign in</a> with your existing login.</p>
-      <p>If you just have general questions and/or would like to try us without an account,
-        please call us at:
-        <a href="tel:6189395755">618.939.5755</a> or email: <a href="mailto:hello@actiong.com">hello@actiong.com</a>.</p>
+      <p>
+        <button type="button" class="button button-center">Sign in/Sign Up</button>
+        If you just have general questions and/or would like to try us without an account,
+        please call us at: <a href="tel:6189395755">618.939.5755</a> or email:
+        <a href="mailto:hello@actiong.com">hello@actiong.com</a>.</p>
     </div>
+    <!-- /.collapse -->
 
     <div class="collapse" id="consultations-container">
       <p>Sorry, but to use this online feature, you will need a <a href="#">current client account.</a>        Client account benefits include:
@@ -213,98 +229,212 @@
           <small>(restrictions apply)</small>
         </li>
       </ul>
-      <p><a href="#">Sign up now,</a> or
-        <a href="#">sign in</a> with your existing login.</p>
-      <p>If you just have general questions and/or would like to try us without an account,
-        please call us at:
-        <a href="tel:6189395755">618.939.5755</a> or email: <a href="mailto:hello@actiong.com">hello@actiong.com</a>.</p>
+      <p>
+        <button type="button" class="button button-center">Sign in/Sign Up</button>
+        If you just have general questions and/or would like to try us without an account,
+        please call us at: <a href="tel:6189395755">618.939.5755</a> or email:
+        <a href="mailto:hello@actiong.com">hello@actiong.com</a>.
+        <p>If you just have general questions and/or would like to try us without an
+          account, please call us at:
+          <a href="tel:6189395755">618.939.5755</a> or email: <a href="mailto:hello@actiong.com">hello@actiong.com</a>.</p>
     </div>
+    <!-- /.collapse -->
 
     <address>
-      <a href="#">hello@actiong.com</a>&nbsp;&bull;&nbsp;<a href="#">618.939.5775</a>&nbsp;&bull;&nbsp;
-      <a href="#">
-        <span class="fa fa-twitter-square"></span>
-      </a>&nbsp;
-      <a href="#">
-        <span class="fa fa-linkedin-square"></span>
-      </a>
+
+      <a href="#">hello@actiong.com</a>&nbsp;&bull;&nbsp;<a href="#">618.939.5775</a>
+      <div class="no-wrap">
+        <a href="#">
+          <span class="fa fa-linkedin-square fa-2x"></span>
+        </a>
+        <a href="#">
+          <span class="fa fa-twitter-square fa-2x"></span>
+        </a>
+        <a href="#">
+          <span class="fa fa-facebook-square fa-2x"></span>
+        </a>
+      </div>
+      <!-- /.no-wrap -->
     </address>
   </header>
 
   <main>
     <div class="grid-container">
-      <section class="main-banner">
-        <h1>Action Graphics</h1>
-        <p> We are
-          <span class="special-text">a Premier Resource</span> for graphics, logos
-          and cutom branded marketing materials.
-        </p>
-        <div id="carousel-action" class="carousel slide carousel-action" data-ride="carousel">
-          <!-- Indicators -->
-          <ol class="carousel-indicators">
-            <li data-target="#carousel-action" data-slide-to="0" class="active"></li>
-            <li data-target="#carousel-action" data-slide-to="1"></li>
-            <li data-target="#carousel-action" data-slide-to="2"></li>
-          </ol>
+      <div class="grid-6">
+        <section class="main-banner">
+          <h1>Action Graphics</h1>
+          <p> We are <span class="special-text">a premier resource</span> for graphics,
+            logos and cutom branded marketing materials.</p>
 
-          <!-- Wrapper for slides -->
-          <div class="carousel-inner" role="listbox">
-            <div class="item active">
-              <img class="feat-img" alt src="http://lorempixel.com/400/300" />
-              <div class="carousel-caption">
-                ...
+          <div class="carousel slide carousel-action" id="carousel-action" data-ride="carousel">
+            <!-- Designer's Note: We need #carousel-action for .carousel to reference and operate properly. -->
+
+            <!-- Indicators -->
+            <ol class="carousel-indicators carousel-indicators-action">
+              <li data-target="#carousel-action" data-slide-to="0" class="active"></li>
+              <li data-target="#carousel-action" data-slide-to="1"></li>
+              <li data-target="#carousel-action" data-slide-to="2"></li>
+              <li data-target="#carousel-action" data-slide-to="3"></li>
+              <li data-target="#carousel-action" data-slide-to="4"></li>
+              <li data-target="#carousel-action" data-slide-to="5"></li>
+              <li data-target="#carousel-action" data-slide-to="6"></li>
+              <li data-target="#carousel-action" data-slide-to="7"></li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+
+              <div class="item active">
+                <img class="feat-img" alt src="http://lorempixel.com/400/300" />
+                <div class="carousel-caption carousel-caption-action">
+                  <strong>Apparel&nbsp;&dash;&nbsp;</strong>Embroidery &amp; More
+                  <a href="#"><small class="no-wrap">(find out more)</small></a>
+                </div>
+                <!-- /.carousel-caption -->
               </div>
-            </div>
-            <div class="item">
-              <img class="feat-img" alt src="http://lorempixel.com/400/300" />
-              <div class="carousel-caption">
-                ...
+              <!-- /.item -->
+
+              <div class="item">
+                <img class="feat-img" alt src="http://lorempixel.com/400/300" />
+                <div class="carousel-caption carousel-caption-action">
+                  <strong>Graphic Design&dash;</strong>Logos &amp; More
+                  <a href="#"><small class="no-wrap">(find out more)</small></a>
+                </div>
+                <!-- /.carousel-caption -->
               </div>
+              <!-- /.item -->
+
+              <div class="item">
+                <img class="feat-img" alt src="http://lorempixel.com/400/300" />
+                <div class="carousel-caption carousel-caption-action">
+                  <strong>Engraving&nbsp;&dash;&nbsp;</strong>Plaques &amp; More
+                  <a href="#"><small class="no-wrap">(find out more)</small></a>
+                </div>
+                <!-- /.carousel-caption -->
+              </div>
+              <!-- /.item -->
+
+              <div class="item">
+                <img class="feat-img" alt src="http://lorempixel.com/400/300" />
+                <div class="carousel-caption carousel-caption-action">
+                  <strong>Print&nbsp;&dash;&nbsp;</strong>Business Cards &amp; More
+                  <a href="#"><small class="no-wrap">(find out more)</small></a>
+                </div>
+                <!-- /.carousel-caption -->
+              </div>
+              <!-- /.item -->
+
+              <div class="item">
+                <img class="feat-img" alt src="http://lorempixel.com/400/300" />
+                <div class="carousel-caption carousel-caption-action">
+                  <strong>Promotional Products&nbsp;&dash;&nbsp;</strong>750K possibilities!
+                  <a href="#"><small class="no-wrap">(find out more)</small></a>
+                </div>
+                <!-- /.carousel-caption -->
+              </div>
+              <!-- /.item -->
+
+              <div class="item">
+                <img class="feat-img" alt src="http://lorempixel.com/400/300" />
+                <div class="carousel-caption carousel-caption-action">
+                  <strong>Signage&dash;</strong>Indoor&nbsp;&amp;&nbsp;Outdoor
+                  <a href="#"><small class="no-wrap">(find out more)</small></a>
+                </div>
+                <!-- /.carousel-caption -->
+              </div>
+              <!-- /.item -->
+
+              <div class="item">
+                <img class="feat-img" alt src="http://lorempixel.com/400/300" />
+                <div class="carousel-caption carousel-caption-action">
+                  <strong>Trade Show Displays&dash;</strong>Backdrops &amp; More
+                  <a href="#"><small class="no-wrap">(find out more)</small></a>
+                </div>
+                <!-- /.carousel-caption -->
+              </div>
+              <!-- /.item -->
+
+              <div class="item">
+                <img class="feat-img" alt src="http://lorempixel.com/400/300" />
+                <div class="carousel-caption carousel-caption-action">
+                  <strong>Vehicle Graphics&dash;</strong>
+                  <a href="#"><small class="no-wrap">(find out more)</small></a>
+                </div>
+                <!-- /.carousel-caption -->
+              </div>
+              <!-- /.item -->
             </div>
-            ...
+            <!-- /.carousel-inner -->
+            <!-- Controls -->
+            <a class="left carousel-control" href="#carousel-action" role="button" data-slide="prev">
+              <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <!-- /.left -->
+            <a class="right carousel-control" href="#carousel-action" role="button" data-slide="next">
+              <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+            <!-- /.right -->
+
           </div>
+          <!-- /.carousel -->
+        </section>
+      </div>
+      <!-- /.grid-6 -->
 
-          <!-- Controls -->
-          <a class="left carousel-control" href="#carousel-action" role="button" data-slide="prev">
-            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-          </a>
-          <a class="right carousel-control" href="#carousel-action" role="button" data-slide="next">
-            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-          </a>
-        </div>
-      </section>
+      <div class="grid-6">
+        <section id="testimonials">
+          <blockquote>
+            <h1>Testimonials</h1>
+            <div class="testimonial">
+              <p>"Action Graphics offers diverse services with a professional flair.
+                I have had business cards made, flyers printed, and my car wrap repaired
+                AND removed. There is nothing they can't do! Their service is always
+                with a smile and is done in a timely, convenient manner. I always
+                look forward to doing business with them ~ it is truly a pleasure...
+                Thank you Charity and Manav for your personal interest in my projects
+                and your sincere work!"
+              </p>
+              <small>&ndash;&nbsp;Candace Chapman, CruiseOne - The Chapman Crew</small>
+            </div>
+            <!-- /.testimonial -->
+
+          </blockquote>
+
+        </section>
+      </div>
+      <!-- /.grid-6 -->
+
     </div>
-
-    <section class="grid-container">
-      <blockquote>
-        <h1>Testimonials</h1>
-        <p>"Action Graphics offers diverse services with a professional flair. I have
-          had business cards made, flyers printed, and my car wrap repaired AND removed.
-          There is nothing they can't do! Their service is always with a smile and
-          is done in a timely, convenient manner. I always look forward to doing
-          business with them ~ it is truly a pleasure... Thank you Charity and Manav
-          for your personal interest in my projects and your sincere work!"</p>
-        <small>&ndash;&nbsp;Candace Chapman CruiseOne, The Chapman Crew</small>
-      </blockquote>
-    </section>
+    <!-- /.grid-container -->
   </main>
+
   <footer class="main-footer">
     <address>
       <a href="#">8802 Summer Rd.&nbsp;&bull;&nbsp;Columbia, IL&nbsp;&bull;&nbsp;62236</a>
       <br>
       <a href="#">hello@actiong.com</a>&nbsp;&bull;&nbsp;<a href="#">618.939.5775</a>
       <br>
-      <a href="#">
-        <span class="fa fa-twitter-square"></span>
-      </a>&nbsp;
-      <a href="#">
-        <span class="fa fa-linkedin-square"></span>
-      </a>
+
+      <div class="no-wrap">
+        <a href="#">
+          <span class="fa fa-linkedin-square fa-2x"></span>
+        </a>
+
+        <a href="#">
+          <span class="fa fa-twitter-square fa-2x"></span>
+        </a>
+
+        <a href="#">
+          <span class="fa fa-facebook-square fa-2x"></span>
+        </a>
+      </div>
+      <!-- /.no-wrap -->
     </address>
+
     <div class="main-logo"><a href="#">Action Graphics &amp; More</a></div>
-    <blockquote>"Action is the foundational key to all success."</blockquote>&nbsp;<i>- Pablo Picasso</i>
+    <blockquote>"Action is the foundational key to all success."</blockquote>&nbsp;<i class="no-wrap">- Pablo Picasso</i>
   </footer>
 
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
